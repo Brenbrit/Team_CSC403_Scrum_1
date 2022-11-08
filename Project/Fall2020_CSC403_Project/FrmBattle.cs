@@ -43,7 +43,7 @@ namespace Fall2020_CSC403_Project {
       picBossBattle.Size = ClientSize;
       picBossBattle.Visible = true;
 
-      SoundPlayer simpleSound = new SoundPlayer(Resources.final_battle);
+      SoundPlayer simpleSound = new SoundPlayer(Resources.iesb_boss);
       simpleSound.Play();
 
       tmrFinalBattle.Enabled = true;
