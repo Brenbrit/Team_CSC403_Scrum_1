@@ -33,7 +33,7 @@ namespace Fall2020_CSC403_Project {
 
     private void FrmLevel_Load(object sender, EventArgs e) {
       const int PADDING = 7;
-      const int NUM_WALLS = 13;
+      const int NUM_WALLS = 11;
       
 
       
@@ -155,6 +155,7 @@ namespace Fall2020_CSC403_Project {
       player.ResetMoveSpeed();
       player.MoveBack();
       worldSound.Stop();
+
       frmBattle = FrmBattle.GetInstance(enemy);
 
        // battleOver function will be called when frmBattle window is closed
@@ -165,8 +166,9 @@ namespace Fall2020_CSC403_Project {
      
 
       if (enemy == bossKoolaid) {
-        battleSound = new SoundPlayer(Resources.battle_music);
+        battleSound = new SoundPlayer(Resources.iesb_boss);
         battleSound.PlayLooping();
+        frmBattle.picEnemy.BackgroundImage = Properties.Resources.kyle;
       }
     }
 

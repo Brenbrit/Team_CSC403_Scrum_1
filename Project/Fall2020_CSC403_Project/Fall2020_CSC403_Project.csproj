@@ -122,6 +122,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="data\captaincrunch.webp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -171,7 +172,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\anky.jpg" />
+    <Content Include="data\bakery.jpg" />
+    <Content Include="data\captaincrunch.jpg" />
+    <Content Include="data\captaincrunch.png" />
+    <Content Include="data\city.jpg" />
+    <Content Include="data\cobblestone.png" />
+    <Content Include="data\cocopuffs.png" />
+    <Content Include="data\Flo.jpg" />
+    <Content Include="data\guice.jpg" />
+    <Content Include="data\IESB.jpg" />
+    <Content Include="data\iesb_boss.wav" />
+    <Content Include="data\jungle.jpg" />
+    <Content Include="data\knife.png" />
+    <Content Include="data\kyle.jpeg" />
+    <Content Include="data\milk.png" />
+    <Content Include="data\mossycobblestone.png" />
+    <Content Include="data\oven.jpg" />
     <Content Include="data\pauseMenuBackground.jpg" />
+    <Content Include="data\yeast.jpg" />
+    <None Include="Resources\prather.jpg" />
+    <None Include="Resources\prather.bmp" />
+    <None Include="Resources\iesb_boss.bmp" />
     <None Include="Resources\pauseMenuBackground.jpg" />
     <None Include="data\Toucan_Sam.png" />
   </ItemGroup>
@@ -187,6 +209,11 @@
     <Content Include="data\battle_music.wav" />
     <Content Include="data\death_music.wav" />
     <Content Include="data\pause_sound.wav" />
+    <Content Include="data\pipe.png" />
+    <Content Include="data\popcorn.jpg" />
+    <Content Include="data\question_mark.png" />
+    <Content Include="data\rat.jpg" />
+    <Content Include="data\statefarm.png" />
     <Content Include="data\win_music.wav" />
     <Content Include="data\world_music.wav" />
   </ItemGroup>
