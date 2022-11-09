@@ -50,6 +50,7 @@
       this.picWall1 = new System.Windows.Forms.PictureBox();
       this.picWall2 = new System.Windows.Forms.PictureBox();
       this.picWall11 = new System.Windows.Forms.PictureBox();
+      this.picCar = new System.Windows.Forms.PictureBox();
       this.moneyLabel = new System.Windows.Forms.Label();
       this.heal1 = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
@@ -69,6 +70,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.heal1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -283,6 +285,17 @@
       this.picWall11.TabIndex = 17;
       this.picWall11.TabStop = false;
       // 
+      // picCar
+      // 
+      this.picCar.BackColor = System.Drawing.Color.Transparent;
+      this.picCar.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carCity;
+      this.picCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.picCar.Location = new System.Drawing.Point(558, 560);
+      this.picCar.Name = "picCar";
+      this.picCar.Size = new System.Drawing.Size(194, 90);
+      this.picCar.TabIndex = 18;
+      this.picCar.TabStop = false;
+      // 
       // moneyLabel
       // 
       this.moneyLabel.BackColor = System.Drawing.Color.Green;
@@ -313,6 +326,8 @@
       this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
       this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.city;
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.ClientSize = new System.Drawing.Size(1176, 726);
+      this.Controls.Add(this.picCar);
       this.ClientSize = new System.Drawing.Size(1123, 634);
       this.Controls.Add(this.heal1);
       this.Controls.Add(this.moneyLabel);
@@ -358,6 +373,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCar)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.heal1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -385,6 +401,7 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
+    private System.Windows.Forms.PictureBox picCar;
     private System.Windows.Forms.Label moneyLabel;
     private System.Windows.Forms.PictureBox heal1;
   }
