@@ -26,7 +26,9 @@ namespace Fall2020_CSC403_Project {
     private bool isPaused;
     private Stopwatch timer;
     private Tuple<Key, Vector2>[] KeyBindings;
-    private FrmPause frmPause; 
+    private FrmPause frmPause;
+
+    private Image playerCarImg;
 
     public FrmLevelCity() {
       InitializeComponent();
@@ -55,6 +57,8 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid.Color = Color.Red;
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+
+      playerCarImg = global::Fall2020_CSC403_Project.Properties.Resources.carBakeryCharacter;
 
       walls = new Character[NUM_WALLS];
       for (int w = 0; w < NUM_WALLS; w++) {
@@ -149,6 +153,7 @@ namespace Fall2020_CSC403_Project {
 
     private void boardCar() {
       removeEnemy(car);
+      player.BoardCar();
     }
 
     private bool HitAWall(Character c) {
