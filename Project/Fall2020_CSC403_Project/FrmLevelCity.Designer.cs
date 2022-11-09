@@ -50,6 +50,7 @@
       this.picWall1 = new System.Windows.Forms.PictureBox();
       this.picWall2 = new System.Windows.Forms.PictureBox();
       this.picWall11 = new System.Windows.Forms.PictureBox();
+      this.picCar = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -67,6 +68,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -280,6 +282,17 @@
       this.picWall11.TabIndex = 17;
       this.picWall11.TabStop = false;
       // 
+      // picCar
+      // 
+      this.picCar.BackColor = System.Drawing.Color.Transparent;
+      this.picCar.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carCity;
+      this.picCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.picCar.Location = new System.Drawing.Point(558, 560);
+      this.picCar.Name = "picCar";
+      this.picCar.Size = new System.Drawing.Size(194, 90);
+      this.picCar.TabIndex = 18;
+      this.picCar.TabStop = false;
+      // 
       // FrmLevelCity
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +301,7 @@
       this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.city;
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.ClientSize = new System.Drawing.Size(1176, 726);
+      this.Controls.Add(this.picCar);
       this.Controls.Add(this.picWall11);
       this.Controls.Add(this.picWall2);
       this.Controls.Add(this.picWall8);
@@ -330,6 +344,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCar)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -356,6 +371,7 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-  }
+        private System.Windows.Forms.PictureBox picCar;
+    }
 }
 
