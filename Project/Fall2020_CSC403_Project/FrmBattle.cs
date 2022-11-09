@@ -31,6 +31,11 @@ namespace Fall2020_CSC403_Project {
       enemy.AttackEvent += PlayerDamage;
       player.AttackEvent += EnemyDamage;
 
+      // Has enemy been hit by car?
+      if (player.InCar) {
+        player.OnAttack(-4);
+      }
+
       battleSound = new SoundPlayer(Resources.battle_music);
       battleSound.PlayLooping();
 
