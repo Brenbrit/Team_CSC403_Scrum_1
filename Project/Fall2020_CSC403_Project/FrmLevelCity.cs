@@ -15,6 +15,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
+    private Enemy car;
     private Enemy heal;
     private Character[] walls;
     // private DateTime timeBegin; - never used. From Cherry.
@@ -43,11 +44,13 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      car = new Enemy(CreatePosition(picCar), CreateCollider(picCar, PADDING));
       heal = new Enemy(CreatePosition(heal1), CreateCollider(heal1, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+      car.Img = picCar.BackgroundImage;
 
       bossKoolaid.Color = Color.Red;
       enemyPoisonPacket.Color = Color.Green;
@@ -127,6 +130,9 @@ namespace Fall2020_CSC403_Project {
       else if (HitAChar(player, enemyCheeto)) {
         Fight(enemyCheeto);
       }
+      else if (HitAChar(player, car)) {
+        boardCar();
+      }
       else if (HitAChar(player, heal))
       {
         player.Health += 15;
@@ -139,6 +145,10 @@ namespace Fall2020_CSC403_Project {
 
       // update player's picture box
       picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+    }
+
+    private void boardCar() {
+      removeEnemy(car);
     }
 
     private bool HitAWall(Character c) {
@@ -261,6 +271,10 @@ namespace Fall2020_CSC403_Project {
             enemyCheeto = null;
             picEnemyCheeto.Visible = false;
         }   
+        else if (enemy == car) {
+            car = null;
+            picCar.Visible = false;
+        }
         else { 
             bossKoolaid = null;
             picBossKoolAid.Visible = false;
