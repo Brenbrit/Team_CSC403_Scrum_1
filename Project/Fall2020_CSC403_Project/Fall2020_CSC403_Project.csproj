@@ -191,14 +191,6 @@
     <Content Include="data\oven.jpg" />
     <Content Include="data\pauseMenuBackground.jpg" />
     <Content Include="data\yeast.jpg" />
-    <None Include="Resources\carJungle.png" />
-    <None Include="Resources\carIESBCharacter.png" />
-    <None Include="Resources\carIESB.png" />
-    <None Include="Resources\carCityCharacter.png" />
-    <None Include="Resources\carCity.png" />
-    <None Include="Resources\carBakeryCharacter.png" />
-    <None Include="Resources\carBakery.png" />
-    <None Include="Resources\carJungleCharacter.png" />
     <None Include="Resources\prather.jpg" />
     <None Include="Resources\prather.bmp" />
     <None Include="Resources\iesb_boss.bmp" />
