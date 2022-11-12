@@ -52,7 +52,6 @@
       this.picWall11 = new System.Windows.Forms.PictureBox();
       this.picCar = new System.Windows.Forms.PictureBox();
       this.picCarPlayer = new System.Windows.Forms.PictureBox();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.moneyLabel = new System.Windows.Forms.Label();
       this.heal1 = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
@@ -74,7 +73,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picCarPlayer)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.heal1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -400,7 +398,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picCar)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picCarPlayer)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.heal1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -428,9 +425,7 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-        private System.Windows.Forms.PictureBox picCar;
-        private System.Windows.Forms.PictureBox picCarPlayer;
-    }
+    private System.Windows.Forms.PictureBox picCarPlayer;
     private System.Windows.Forms.PictureBox picCar;
     private System.Windows.Forms.Label moneyLabel;
     private System.Windows.Forms.PictureBox heal1;

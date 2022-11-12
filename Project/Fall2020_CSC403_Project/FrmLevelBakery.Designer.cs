@@ -47,7 +47,6 @@
       this.picPlayer = new System.Windows.Forms.PictureBox();
       this.picCar = new System.Windows.Forms.PictureBox();
       this.picCarPlayer = new System.Windows.Forms.PictureBox();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.moneyLabel = new System.Windows.Forms.Label();
       this.heal1 = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picWall13)).BeginInit();
@@ -71,7 +70,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picCarPlayer)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.heal1)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -108,14 +106,6 @@
       this.picWall13.Size = new System.Drawing.Size(237, 247);
       this.picWall13.TabIndex = 18;
       this.picWall13.TabStop = false;
-      this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-      this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.cobblestone;
-      this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.pictureBox1.Location = new System.Drawing.Point(535, 415);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(237, 247);
-      this.pictureBox1.TabIndex = 18;
-      this.pictureBox1.TabStop = false;
       // 
       // picWall11
       // 
@@ -339,7 +329,7 @@
       this.heal1.TabIndex = 22;
       this.heal1.TabStop = false;
       // 
-      // pictureBox2
+      // picCarPlayer
       // 
       this.picCarPlayer.BackColor = System.Drawing.Color.Transparent;
       this.picCarPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carBakeryCharacter;
@@ -360,7 +350,6 @@
       this.ClientSize = new System.Drawing.Size(1176, 726);
       this.Controls.Add(this.picCarPlayer);
       this.Controls.Add(this.picCar);
-      this.Controls.Add(this.pictureBox1);
       this.Controls.Add(this.heal1);
       this.Controls.Add(this.moneyLabel);
       this.Controls.Add(this.picWall13);
@@ -410,7 +399,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.picCar)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picCarPlayer)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.heal1)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -439,8 +427,6 @@
     public System.Windows.Forms.PictureBox picPlayer;
     private System.Windows.Forms.PictureBox picCar;
     private System.Windows.Forms.PictureBox picCarPlayer;
-    private System.Windows.Forms.PictureBox pictureBox1;
-    private System.Windows.Forms.PictureBox pictureBox2;
     private System.Windows.Forms.PictureBox picWall13;
     private System.Windows.Forms.Label moneyLabel;
     private System.Windows.Forms.PictureBox heal1;

@@ -362,7 +362,7 @@
       this.PerformLayout();
 
       this.components = new System.ComponentModel.Container();
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevelJungle));
+      // System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevelJungle));
       this.lblInGameTime = new System.Windows.Forms.Label();
       this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
       this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
@@ -719,13 +719,11 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-        private System.Windows.Forms.PictureBox picCar;
-        private System.Windows.Forms.PictureBox picCarPlayer;
+    private System.Windows.Forms.PictureBox picCar;
+    private System.Windows.Forms.PictureBox picCarPlayer;
     private System.Windows.Forms.Label moneyLabel;
     private System.Windows.Forms.PictureBox heal1;
-    public System.Windows.Forms.PictureBox picPlayer;
-    private System.Windows.Forms.PictureBox picCar;
-    private System.Windows.Forms.PictureBox pictureBox1;
+    // private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
