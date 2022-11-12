@@ -181,6 +181,7 @@
     <Content Include="data\cocopuffs.png" />
     <Content Include="data\Flo.jpg" />
     <Content Include="data\guice.jpg" />
+    <None Include="data\health.jpg" />
     <Content Include="data\IESB.jpg" />
     <Content Include="data\iesb_boss.wav" />
     <Content Include="data\jungle.jpg" />

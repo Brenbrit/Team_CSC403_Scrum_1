@@ -19,6 +19,7 @@ namespace Fall2020_CSC403_Project {
     private FrmBattle frmBattle;
     private SoundPlayer worldSound;
     private SoundPlayer battleSound;
+    private Enemy heal;
 
     private bool isPaused;
     private Stopwatch timer;
@@ -41,6 +42,7 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      heal = new Enemy(CreatePosition(heal1), CreateCollider(heal1, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
@@ -121,6 +123,12 @@ namespace Fall2020_CSC403_Project {
       }
       else if (HitAChar(player, enemyCheeto)) {
         Fight(enemyCheeto);
+      }
+      else if (HitAChar(player, heal))
+      {
+        player.Health += 15;
+        heal = null;
+        heal1.Visible = false;
       }
       if (HitAChar(player, bossKoolaid)) {
         Fight(bossKoolaid);

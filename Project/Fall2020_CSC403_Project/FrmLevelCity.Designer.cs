@@ -50,6 +50,7 @@
       this.picWall1 = new System.Windows.Forms.PictureBox();
       this.picWall2 = new System.Windows.Forms.PictureBox();
       this.picWall11 = new System.Windows.Forms.PictureBox();
+      this.heal1 = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -67,6 +68,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.heal1)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -208,9 +210,9 @@
       this.picWall10.BackColor = System.Drawing.Color.Transparent;
       this.picWall10.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
       this.picWall10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall10.Location = new System.Drawing.Point(653, 89);
+      this.picWall10.Location = new System.Drawing.Point(700, 89);
       this.picWall10.Name = "picWall10";
-      this.picWall10.Size = new System.Drawing.Size(228, 162);
+      this.picWall10.Size = new System.Drawing.Size(181, 161);
       this.picWall10.TabIndex = 11;
       this.picWall10.TabStop = false;
       // 
@@ -280,6 +282,17 @@
       this.picWall11.TabIndex = 17;
       this.picWall11.TabStop = false;
       // 
+      // heal1
+      // 
+      this.heal1.BackColor = System.Drawing.Color.Transparent;
+      this.heal1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.health;
+      this.heal1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.heal1.Location = new System.Drawing.Point(620, 74);
+      this.heal1.Name = "heal1";
+      this.heal1.Size = new System.Drawing.Size(74, 95);
+      this.heal1.TabIndex = 18;
+      this.heal1.TabStop = false;
+      // 
       // FrmLevelCity
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +301,7 @@
       this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.city;
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.ClientSize = new System.Drawing.Size(1176, 726);
+      this.Controls.Add(this.heal1);
       this.Controls.Add(this.picWall11);
       this.Controls.Add(this.picWall2);
       this.Controls.Add(this.picWall8);
@@ -330,6 +344,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.heal1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -356,6 +371,7 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-  }
+        private System.Windows.Forms.PictureBox heal1;
+    }
 }
 

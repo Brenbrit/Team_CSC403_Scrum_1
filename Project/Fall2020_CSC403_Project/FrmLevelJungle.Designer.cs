@@ -50,6 +50,7 @@
       this.picWall3 = new System.Windows.Forms.PictureBox();
       this.picBossKoolAid = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
+      this.heal1 = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
@@ -67,6 +68,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.heal1)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -280,6 +282,17 @@
       this.picPlayer.TabIndex = 0;
       this.picPlayer.TabStop = false;
       // 
+      // heal1
+      // 
+      this.heal1.BackColor = System.Drawing.Color.Transparent;
+      this.heal1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.health;
+      this.heal1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.heal1.Location = new System.Drawing.Point(376, 577);
+      this.heal1.Name = "heal1";
+      this.heal1.Size = new System.Drawing.Size(67, 73);
+      this.heal1.TabIndex = 18;
+      this.heal1.TabStop = false;
+      // 
       // FrmLevelJungle
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +300,7 @@
       this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.ClientSize = new System.Drawing.Size(1176, 726);
+      this.Controls.Add(this.heal1);
       this.Controls.Add(this.picWall11);
       this.Controls.Add(this.picWall2);
       this.Controls.Add(this.picWall8);
@@ -329,6 +343,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.heal1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -355,6 +370,7 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-  }
+        private System.Windows.Forms.PictureBox heal1;
+    }
 }
 
