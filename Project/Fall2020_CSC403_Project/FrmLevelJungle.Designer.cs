@@ -567,7 +567,7 @@
       this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
       this.picEnemyCheeto.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.milk;
       this.picEnemyCheeto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picEnemyCheeto.Location = new System.Drawing.Point(735, 492);
+      this.picEnemyCheeto.Location = new System.Drawing.Point(893, 485);
       this.picEnemyCheeto.Name = "picEnemyCheeto";
       this.picEnemyCheeto.Size = new System.Drawing.Size(185, 165);
       this.picEnemyCheeto.TabIndex = 5;
@@ -622,7 +622,7 @@
       this.picCar.BackColor = System.Drawing.Color.Transparent;
       this.picCar.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carJungle;
       this.picCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-      this.picCar.Location = new System.Drawing.Point(936, 527);
+      this.picCar.Location = new System.Drawing.Point(621, 485);
       this.picCar.Name = "picCar";
       this.picCar.Size = new System.Drawing.Size(151, 123);
       this.picCar.TabIndex = 18;

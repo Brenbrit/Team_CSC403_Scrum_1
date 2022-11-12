@@ -262,7 +262,7 @@
       this.picCar.BackColor = System.Drawing.Color.Transparent;
       this.picCar.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carIESB;
       this.picCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-      this.picCar.Location = new System.Drawing.Point(950, 74);
+      this.picCar.Location = new System.Drawing.Point(740, 74);
       this.picCar.Name = "picCar";
       this.picCar.Size = new System.Drawing.Size(144, 72);
       this.picCar.TabIndex = 18;
