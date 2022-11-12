@@ -233,7 +233,7 @@
       this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
       this.picEnemyCheeto.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.milk;
       this.picEnemyCheeto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picEnemyCheeto.Location = new System.Drawing.Point(735, 492);
+      this.picEnemyCheeto.Location = new System.Drawing.Point(893, 485);
       this.picEnemyCheeto.Name = "picEnemyCheeto";
       this.picEnemyCheeto.Size = new System.Drawing.Size(185, 165);
       this.picEnemyCheeto.TabIndex = 5;
