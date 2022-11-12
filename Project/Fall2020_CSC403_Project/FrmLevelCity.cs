@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Fall2020_CSC403_Project.Properties;
 using System.Windows.Input;
 using KeyEventArgs = System.Windows.Forms.KeyEventArgs;
+using System.Windows.Forms.VisualStyles;
 
 namespace Fall2020_CSC403_Project {
   public partial class FrmLevelCity : Form {
@@ -74,6 +75,8 @@ namespace Fall2020_CSC403_Project {
       };
 
       Game.player = player;
+      this.moneyLabel.Text = "$" + player.showMoney();
+
       isPaused = false;
 
       // Initiate Stopwatch instance and start the timer 
@@ -182,10 +185,17 @@ namespace Fall2020_CSC403_Project {
     private void battleOver(object sender, FormClosedEventArgs e) { 
         
         // If the enemy has no health after the battle
-        if (enemyIsDead(frmBattle.enemy))
+        if (enemyIsDead(frmBattle.enemy)) { 
 
             // Remove the enemy from the game
-            removeEnemy(frmBattle.enemy);   
+            removeEnemy(frmBattle.enemy); 
+
+            // Giving the player more money (and consequently more problems)
+            player.giveMoney(100);
+
+            // Updating the money label to show the player's current amount of money
+            this.moneyLabel.Text = "$" + player.showMoney();
+        }
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
