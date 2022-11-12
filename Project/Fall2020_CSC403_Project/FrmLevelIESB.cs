@@ -152,6 +152,14 @@ namespace Fall2020_CSC403_Project {
 
     private void boardCar() {
       removeEnemy(car);
+
+      // change player's image (lots of code)
+      picPlayer.BackColor = picCarPlayer.BackColor;
+      picPlayer.BackgroundImage = picCarPlayer.BackgroundImage;
+      picPlayer.BackgroundImageLayout = picCarPlayer.BackgroundImageLayout;
+      picPlayer.Size = picCarPlayer.Size;
+
+      player.Collider = CreateCollider(picCarPlayer, 7);
       player.BoardCar();
     }
 

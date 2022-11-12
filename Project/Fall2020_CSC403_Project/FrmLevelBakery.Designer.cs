@@ -437,18 +437,13 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox picCar;
-        private System.Windows.Forms.PictureBox picCarPlayer;
-    private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.PictureBox picCar;
+    private System.Windows.Forms.PictureBox picCarPlayer;
+    private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.PictureBox pictureBox2;
     private System.Windows.Forms.PictureBox picWall13;
     private System.Windows.Forms.Label moneyLabel;
     private System.Windows.Forms.PictureBox heal1;
-  }
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox picCar;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
