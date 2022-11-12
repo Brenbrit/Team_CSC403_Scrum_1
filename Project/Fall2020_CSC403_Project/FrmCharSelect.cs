@@ -54,7 +54,7 @@ namespace Fall2020_CSC403_Project
     //MrPeanut Button
     private void MrPeanut_Click(object sender, EventArgs e)
     {
-      FrmLevelIESB game = new FrmLevelIESB(); // create new instance of FrmLevel
+      picCarPlayer game = new picCarPlayer(); // create new instance of FrmLevel
       game.FormClosed += gameclosed;
       game.Show(); //Show it
       this.Hide();

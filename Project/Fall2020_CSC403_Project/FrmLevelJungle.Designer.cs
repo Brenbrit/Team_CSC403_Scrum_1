@@ -51,7 +51,7 @@
       this.picBossKoolAid = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
       this.picCar = new System.Windows.Forms.PictureBox();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
+      this.picCarPlayer = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
@@ -70,7 +70,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCarPlayer)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -79,10 +79,9 @@
       this.lblInGameTime.BackColor = System.Drawing.Color.Black;
       this.lblInGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblInGameTime.ForeColor = System.Drawing.Color.White;
-      this.lblInGameTime.Location = new System.Drawing.Point(16, 11);
-      this.lblInGameTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+      this.lblInGameTime.Location = new System.Drawing.Point(12, 9);
       this.lblInGameTime.Name = "lblInGameTime";
-      this.lblInGameTime.Size = new System.Drawing.Size(60, 24);
+      this.lblInGameTime.Size = new System.Drawing.Size(46, 18);
       this.lblInGameTime.TabIndex = 2;
       this.lblInGameTime.Text = "label1";
       this.lblInGameTime.Click += new System.EventHandler(this.lblInGameTime_Click);
@@ -103,10 +102,9 @@
       this.picWall11.BackColor = System.Drawing.Color.Transparent;
       this.picWall11.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall11.Location = new System.Drawing.Point(599, 628);
-      this.picWall11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall11.Location = new System.Drawing.Point(449, 510);
       this.picWall11.Name = "picWall11";
-      this.picWall11.Size = new System.Drawing.Size(221, 181);
+      this.picWall11.Size = new System.Drawing.Size(166, 147);
       this.picWall11.TabIndex = 17;
       this.picWall11.TabStop = false;
       // 
@@ -115,10 +113,9 @@
       this.picWall2.BackColor = System.Drawing.Color.Transparent;
       this.picWall2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall2.Location = new System.Drawing.Point(941, 1);
-      this.picWall2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall2.Location = new System.Drawing.Point(706, 1);
       this.picWall2.Name = "picWall2";
-      this.picWall2.Size = new System.Drawing.Size(625, 82);
+      this.picWall2.Size = new System.Drawing.Size(469, 67);
       this.picWall2.TabIndex = 16;
       this.picWall2.TabStop = false;
       // 
@@ -127,10 +124,9 @@
       this.picWall8.BackColor = System.Drawing.Color.Transparent;
       this.picWall8.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall8.Location = new System.Drawing.Point(1457, 489);
-      this.picWall8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall8.Location = new System.Drawing.Point(1093, 397);
       this.picWall8.Name = "picWall8";
-      this.picWall8.Size = new System.Drawing.Size(109, 401);
+      this.picWall8.Size = new System.Drawing.Size(82, 326);
       this.picWall8.TabIndex = 15;
       this.picWall8.TabStop = false;
       // 
@@ -139,10 +135,9 @@
       this.picWall7.BackColor = System.Drawing.Color.Transparent;
       this.picWall7.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall7.Location = new System.Drawing.Point(952, 807);
-      this.picWall7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall7.Location = new System.Drawing.Point(714, 656);
       this.picWall7.Name = "picWall7";
-      this.picWall7.Size = new System.Drawing.Size(507, 82);
+      this.picWall7.Size = new System.Drawing.Size(380, 67);
       this.picWall7.TabIndex = 14;
       this.picWall7.TabStop = false;
       // 
@@ -151,10 +146,9 @@
       this.picWall1.BackColor = System.Drawing.Color.Transparent;
       this.picWall1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall1.Location = new System.Drawing.Point(111, 1);
-      this.picWall1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall1.Location = new System.Drawing.Point(83, 1);
       this.picWall1.Name = "picWall1";
-      this.picWall1.Size = new System.Drawing.Size(843, 82);
+      this.picWall1.Size = new System.Drawing.Size(632, 67);
       this.picWall1.TabIndex = 13;
       this.picWall1.TabStop = false;
       // 
@@ -163,10 +157,9 @@
       this.picWall0.BackColor = System.Drawing.Color.Transparent;
       this.picWall0.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall0.Location = new System.Drawing.Point(3, 1);
-      this.picWall0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall0.Location = new System.Drawing.Point(2, 1);
       this.picWall0.Name = "picWall0";
-      this.picWall0.Size = new System.Drawing.Size(109, 478);
+      this.picWall0.Size = new System.Drawing.Size(82, 388);
       this.picWall0.TabIndex = 12;
       this.picWall0.TabStop = false;
       // 
@@ -175,10 +168,9 @@
       this.picWall10.BackColor = System.Drawing.Color.Transparent;
       this.picWall10.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall10.Location = new System.Drawing.Point(380, 276);
-      this.picWall10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall10.Location = new System.Drawing.Point(285, 224);
       this.picWall10.Name = "picWall10";
-      this.picWall10.Size = new System.Drawing.Size(224, 178);
+      this.picWall10.Size = new System.Drawing.Size(168, 145);
       this.picWall10.TabIndex = 11;
       this.picWall10.TabStop = false;
       // 
@@ -187,10 +179,9 @@
       this.picWall9.BackColor = System.Drawing.Color.Transparent;
       this.picWall9.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall9.Location = new System.Drawing.Point(599, 276);
-      this.picWall9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall9.Location = new System.Drawing.Point(449, 224);
       this.picWall9.Name = "picWall9";
-      this.picWall9.Size = new System.Drawing.Size(221, 178);
+      this.picWall9.Size = new System.Drawing.Size(166, 145);
       this.picWall9.TabIndex = 10;
       this.picWall9.TabStop = false;
       // 
@@ -199,10 +190,9 @@
       this.picWall6.BackColor = System.Drawing.Color.Transparent;
       this.picWall6.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall6.Location = new System.Drawing.Point(476, 807);
-      this.picWall6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall6.Location = new System.Drawing.Point(357, 656);
       this.picWall6.Name = "picWall6";
-      this.picWall6.Size = new System.Drawing.Size(477, 82);
+      this.picWall6.Size = new System.Drawing.Size(358, 67);
       this.picWall6.TabIndex = 9;
       this.picWall6.TabStop = false;
       // 
@@ -211,10 +201,9 @@
       this.picWall12.BackColor = System.Drawing.Color.Transparent;
       this.picWall12.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall12.Location = new System.Drawing.Point(1457, 79);
-      this.picWall12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall12.Location = new System.Drawing.Point(1093, 64);
       this.picWall12.Name = "picWall12";
-      this.picWall12.Size = new System.Drawing.Size(109, 420);
+      this.picWall12.Size = new System.Drawing.Size(82, 341);
       this.picWall12.TabIndex = 8;
       this.picWall12.TabStop = false;
       // 
@@ -223,10 +212,9 @@
       this.picWall4.BackColor = System.Drawing.Color.Transparent;
       this.picWall4.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall4.Location = new System.Drawing.Point(3, 475);
-      this.picWall4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall4.Location = new System.Drawing.Point(2, 386);
       this.picWall4.Name = "picWall4";
-      this.picWall4.Size = new System.Drawing.Size(109, 334);
+      this.picWall4.Size = new System.Drawing.Size(82, 271);
       this.picWall4.TabIndex = 7;
       this.picWall4.TabStop = false;
       // 
@@ -235,10 +223,9 @@
       this.picWall5.BackColor = System.Drawing.Color.Transparent;
       this.picWall5.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall5.Location = new System.Drawing.Point(3, 807);
-      this.picWall5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall5.Location = new System.Drawing.Point(2, 656);
       this.picWall5.Name = "picWall5";
-      this.picWall5.Size = new System.Drawing.Size(477, 82);
+      this.picWall5.Size = new System.Drawing.Size(358, 67);
       this.picWall5.TabIndex = 6;
       this.picWall5.TabStop = false;
       // 
@@ -247,10 +234,9 @@
       this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
       this.picEnemyCheeto.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.milk;
       this.picEnemyCheeto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picEnemyCheeto.Location = new System.Drawing.Point(980, 606);
-      this.picEnemyCheeto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picEnemyCheeto.Location = new System.Drawing.Point(735, 492);
       this.picEnemyCheeto.Name = "picEnemyCheeto";
-      this.picEnemyCheeto.Size = new System.Drawing.Size(247, 203);
+      this.picEnemyCheeto.Size = new System.Drawing.Size(185, 165);
       this.picEnemyCheeto.TabIndex = 5;
       this.picEnemyCheeto.TabStop = false;
       // 
@@ -259,10 +245,9 @@
       this.picEnemyPoisonPacket.BackColor = System.Drawing.Color.Transparent;
       this.picEnemyPoisonPacket.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.cocopuffs;
       this.picEnemyPoisonPacket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picEnemyPoisonPacket.Location = new System.Drawing.Point(555, 117);
-      this.picEnemyPoisonPacket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picEnemyPoisonPacket.Location = new System.Drawing.Point(416, 95);
       this.picEnemyPoisonPacket.Name = "picEnemyPoisonPacket";
-      this.picEnemyPoisonPacket.Size = new System.Drawing.Size(201, 151);
+      this.picEnemyPoisonPacket.Size = new System.Drawing.Size(151, 123);
       this.picEnemyPoisonPacket.TabIndex = 4;
       this.picEnemyPoisonPacket.TabStop = false;
       // 
@@ -271,10 +256,9 @@
       this.picWall3.BackColor = System.Drawing.Color.Transparent;
       this.picWall3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.mossycobblestone;
       this.picWall3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall3.Location = new System.Drawing.Point(599, 449);
-      this.picWall3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picWall3.Location = new System.Drawing.Point(449, 365);
       this.picWall3.Name = "picWall3";
-      this.picWall3.Size = new System.Drawing.Size(221, 188);
+      this.picWall3.Size = new System.Drawing.Size(166, 153);
       this.picWall3.TabIndex = 3;
       this.picWall3.TabStop = false;
       // 
@@ -283,10 +267,9 @@
       this.picBossKoolAid.BackColor = System.Drawing.Color.Transparent;
       this.picBossKoolAid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBossKoolAid.BackgroundImage")));
       this.picBossKoolAid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picBossKoolAid.Location = new System.Drawing.Point(184, 528);
-      this.picBossKoolAid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picBossKoolAid.Location = new System.Drawing.Point(138, 429);
       this.picBossKoolAid.Name = "picBossKoolAid";
-      this.picBossKoolAid.Size = new System.Drawing.Size(257, 239);
+      this.picBossKoolAid.Size = new System.Drawing.Size(193, 194);
       this.picBossKoolAid.TabIndex = 1;
       this.picBossKoolAid.TabStop = false;
       // 
@@ -295,10 +278,9 @@
       this.picPlayer.BackColor = System.Drawing.Color.Transparent;
       this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Toucan_Sam;
       this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picPlayer.Location = new System.Drawing.Point(1217, 142);
-      this.picPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picPlayer.Location = new System.Drawing.Point(913, 115);
       this.picPlayer.Name = "picPlayer";
-      this.picPlayer.Size = new System.Drawing.Size(145, 137);
+      this.picPlayer.Size = new System.Drawing.Size(109, 111);
       this.picPlayer.TabIndex = 0;
       this.picPlayer.TabStop = false;
       // 
@@ -307,34 +289,32 @@
       this.picCar.BackColor = System.Drawing.Color.Transparent;
       this.picCar.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carJungle;
       this.picCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-      this.picCar.Location = new System.Drawing.Point(1248, 649);
-      this.picCar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.picCar.Location = new System.Drawing.Point(936, 527);
       this.picCar.Name = "picCar";
-      this.picCar.Size = new System.Drawing.Size(201, 151);
+      this.picCar.Size = new System.Drawing.Size(151, 123);
       this.picCar.TabIndex = 18;
       this.picCar.TabStop = false;
       // 
-      // pictureBox1
+      // picCarPlayer
       // 
-      this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-      this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carJungleCharacter;
-      this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-      this.pictureBox1.Location = new System.Drawing.Point(684, 372);
-      this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(201, 151);
-      this.pictureBox1.TabIndex = 19;
-      this.pictureBox1.TabStop = false;
-      this.pictureBox1.Visible = false;
+      this.picCarPlayer.BackColor = System.Drawing.Color.Transparent;
+      this.picCarPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carJungleCharacter;
+      this.picCarPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.picCarPlayer.Location = new System.Drawing.Point(513, 302);
+      this.picCarPlayer.Name = "picCarPlayer";
+      this.picCarPlayer.Size = new System.Drawing.Size(151, 123);
+      this.picCarPlayer.TabIndex = 19;
+      this.picCarPlayer.TabStop = false;
+      this.picCarPlayer.Visible = false;
       // 
       // FrmLevelJungle
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.ClientSize = new System.Drawing.Size(1568, 894);
-      this.Controls.Add(this.pictureBox1);
+      this.ClientSize = new System.Drawing.Size(1176, 726);
+      this.Controls.Add(this.picCarPlayer);
       this.Controls.Add(this.picCar);
       this.Controls.Add(this.picWall11);
       this.Controls.Add(this.picWall2);
@@ -355,7 +335,6 @@
       this.Controls.Add(this.picBossKoolAid);
       this.Controls.Add(this.picPlayer);
       this.DoubleBuffered = true;
-      this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
       this.Name = "FrmLevelJungle";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
       this.Text = "Explore";
@@ -380,7 +359,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picCar)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCarPlayer)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -408,7 +387,7 @@
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox picCar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picCarPlayer;
     }
 }
 
