@@ -191,6 +191,7 @@
     <Content Include="data\oven.jpg" />
     <Content Include="data\pauseMenuBackground.jpg" />
     <Content Include="data\yeast.jpg" />
+    <None Include="Resources\car_crash.wav" />
     <None Include="Resources\carCity.png" />
     <None Include="Resources\carBakeryCharacter.png" />
     <None Include="Resources\carBakery.png" />
