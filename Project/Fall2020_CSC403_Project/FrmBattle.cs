@@ -3,6 +3,7 @@ using Fall2020_CSC403_Project.Properties;
 using System;
 using System.Drawing;
 using System.Media;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project {
@@ -13,6 +14,7 @@ namespace Fall2020_CSC403_Project {
     private Player player;
     private SoundPlayer battleSound;
     private SoundPlayer worldSound;
+    private SoundPlayer crashSound;
 
     private FrmBattle() {
       InitializeComponent();
@@ -20,7 +22,7 @@ namespace Fall2020_CSC403_Project {
       lblFleeStatus.Text = "";
     }
 
-    public void Setup() {
+    public async void Setup() {
       // update for this enemy
       picEnemy.BackgroundImage = enemy.Img;
       picEnemy.Refresh();
@@ -33,6 +35,9 @@ namespace Fall2020_CSC403_Project {
 
       // Has enemy been hit by car?
       if (player.InCar) {
+        crashSound = new SoundPlayer(Resources.car_crash);
+        // Wait for sound to finish playing
+        await Task.Run(() => { crashSound.PlaySync(); });
         player.OnAttack(-4);
       }
 
