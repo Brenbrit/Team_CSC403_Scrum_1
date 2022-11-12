@@ -113,3 +113,9 @@ Key bindings can be altered by changing the `KeyBindings` array in `FrmLevel.cs`
 
 ### New characters and character select screen - John
 Users are met with a character select screen when opening the game. Depending on their choice, the character chosen will be used for the duration of their play time. Characters are: MrPeanut, Toucan_Sam, Doughboy, and Martin. `Program.cs` now calls on `FrmCharSelect.cs` rather than `FrmLevel.cs` now. 
+
+### New playable levels
+Users will be able to play a different character based on which level they select. Each level has it's own theme and enemies. The levels are as follows: IESB, Jungle, City, and Bakery. 
+
+### Health Packs
+When colliding with health packs found on each level of the game, the player will heal 15 hp. 
