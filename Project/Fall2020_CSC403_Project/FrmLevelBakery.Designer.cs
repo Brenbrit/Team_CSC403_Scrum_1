@@ -27,7 +27,7 @@
       this.lblInGameTime = new System.Windows.Forms.Label();
       this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
       this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
+      this.picWall13 = new System.Windows.Forms.PictureBox();
       this.picWall11 = new System.Windows.Forms.PictureBox();
       this.picWall2 = new System.Windows.Forms.PictureBox();
       this.picWall8 = new System.Windows.Forms.PictureBox();
@@ -45,7 +45,7 @@
       this.picWall3 = new System.Windows.Forms.PictureBox();
       this.picBossKoolAid = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picWall13)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
@@ -89,16 +89,16 @@
       this.tmrPlayerMove.Interval = 10;
       this.tmrPlayerMove.Tick += new System.EventHandler(this.tmrPlayerMove_Tick);
       // 
-      // pictureBox1
+      // picWall13
       // 
-      this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-      this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.cobblestone;
-      this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.pictureBox1.Location = new System.Drawing.Point(535, 415);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(237, 247);
-      this.pictureBox1.TabIndex = 18;
-      this.pictureBox1.TabStop = false;
+      this.picWall13.BackColor = System.Drawing.Color.Transparent;
+      this.picWall13.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.cobblestone;
+      this.picWall13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.picWall13.Location = new System.Drawing.Point(535, 415);
+      this.picWall13.Name = "picWall13";
+      this.picWall13.Size = new System.Drawing.Size(237, 247);
+      this.picWall13.TabIndex = 18;
+      this.picWall13.TabStop = false;
       // 
       // picWall11
       // 
@@ -294,7 +294,7 @@
       this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.bakery;
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.ClientSize = new System.Drawing.Size(1176, 726);
-      this.Controls.Add(this.pictureBox1);
+      this.Controls.Add(this.picWall13);
       this.Controls.Add(this.picWall11);
       this.Controls.Add(this.picWall2);
       this.Controls.Add(this.picWall8);
@@ -320,7 +320,7 @@
       this.Load += new System.EventHandler(this.FrmLevel_Load);
       this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLevel_KeyDown);
       this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLevel_KeyUp);
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picWall13)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall8)).EndInit();
@@ -348,9 +348,9 @@
     private System.Windows.Forms.Label lblInGameTime;
     private System.Windows.Forms.Timer tmrUpdateInGameTime;
     private System.Windows.Forms.Timer tmrPlayerMove;
-    private System.Windows.Forms.PictureBox picWall3;
     private System.Windows.Forms.PictureBox picEnemyPoisonPacket;
     private System.Windows.Forms.PictureBox picEnemyCheeto;
+    private System.Windows.Forms.PictureBox picWall3;
     private System.Windows.Forms.PictureBox picWall5;
     private System.Windows.Forms.PictureBox picWall4;
     private System.Windows.Forms.PictureBox picWall12;
@@ -364,7 +364,7 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picWall13;
     }
 }
 
