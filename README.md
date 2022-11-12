@@ -113,3 +113,16 @@ Key bindings can be altered by changing the `KeyBindings` array in `FrmLevel.cs`
 
 ### New characters and character select screen - John
 Users are met with a character select screen when opening the game. Depending on their choice, the character chosen will be used for the duration of their play time. Characters are: MrPeanut, Toucan_Sam, Doughboy, and Martin. `Program.cs` now calls on `FrmCharSelect.cs` rather than `FrmLevel.cs` now. 
+
+<br/>
+
+### Cars - Brendan
+Users are able to board and ride around in cars. There is currently no functionality to get out of a car. This is done by adding 8 new pictures to the game: one car for each level and a photoshopped version of that car with the player inside.
+
+When a player hits a car in the level, their image and hitbox is changed to that of the car. Their speed is also increased from 3 to 5. Finally, when players hit enemies while in a car the enemy will take a hit of damage.
+
+`Character.cs` had its attribute `Collider` changed to public. This allowed each FrmLevel to set a different collider. In addition, a new function and two new variables have been added to the same file. `CarGo_Inc` is the speed that the player will move once in the car (currently set to 5) and `InCar` is a boolean which dictates whether or not a player is currently in a car (used for battles). `BoardCar()` simply changes the player's speed and `InCar` value.
+
+`FrmBattle.cs` now checks if a player is in a car at the beginning of the fight. If they are, a crashing sound is played and the enemy is dealt a hit of damage. Note: there is a known bug with this. If the player ends the fight before the crashing sound is over, the program will crash because the background music was ordered to stop when it had, in fact, never started. A hotfix for this would be to add a null check to the function which stops the music, but this just results in the battle music playing in the world.
+
+`FrmLevel.cs`'s variants now have two cars each: Cars and player-cars have been added as PictureBoxes. The player-car on each level is invisible and is used once the player hits the real car.
