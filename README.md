@@ -127,8 +127,16 @@ When a player hits a car in the level, their image and hitbox is changed to that
 
 `FrmLevel.cs`'s variants now have two cars each: Cars and player-cars have been added as PictureBoxes. The player-car on each level is invisible and is used once the player hits the real car.
 
+ <br/>
+ 
+ ### Title Screen - Kennedy
+ When the player first starts the game, they were originally thrown straight into the game. Then, we added the character selection feature and started the game with that window. Now, before you get to the character select window, you are greated by a title screen. You can either push the play button and choose your character or you can exit, which will close the entire application's process.
+
+<br/>
+
 ### New playable levels
 Users will be able to play a different character based on which level they select. Each level has it's own theme and enemies. The levels are as follows: IESB, Jungle, City, and Bakery. 
 
 ### Health Packs
 When colliding with health packs found on each level of the game, the player will heal 15 hp. 
+
