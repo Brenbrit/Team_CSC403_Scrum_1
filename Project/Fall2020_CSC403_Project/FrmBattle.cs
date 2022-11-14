@@ -16,7 +16,6 @@ namespace Fall2020_CSC403_Project {
     private FrmKillOrSpare choice = new FrmKillOrSpare();
     public int choice_ratio = 0;
 
-
     private FrmBattle() {
       InitializeComponent();
       player = Game.player;
@@ -49,6 +48,7 @@ namespace Fall2020_CSC403_Project {
       SoundPlayer simpleSound = new SoundPlayer(Resources.iesb_boss);
       simpleSound.Play();
 
+      if (choice_ratio >= 0) { player.DoubleStrength(); }
       tmrFinalBattle.Enabled = true;
     }
 
@@ -123,9 +123,7 @@ namespace Fall2020_CSC403_Project {
         Close();
         choice.ShowDialog();
         choice_ratio =+ choice.getRatio();
-        Console.WriteLine(choice.getRatio());
-        Console.WriteLine(choice_ratio);
-        //PlayWorldSound();
+        PlayWorldSound();
       }
     }
 

@@ -20,6 +20,8 @@ namespace Fall2020_CSC403_Project.code {
       Health = MaxHealth;
     }
 
+    public void DoubleStrength() { this.strength *= 2; }
+
     public void OnAttack(int amount) {
       AttackEvent((int)(amount * strength));
     }
