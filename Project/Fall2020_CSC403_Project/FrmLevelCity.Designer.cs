@@ -51,6 +51,7 @@
             this.picWall2 = new System.Windows.Forms.PictureBox();
             this.picWall11 = new System.Windows.Forms.PictureBox();
             this.moneyLabel = new System.Windows.Forms.Label();
+            this.weaponShopLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weaponShopLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -310,6 +312,18 @@
             this.moneyLabel.TabIndex = 22;
             this.moneyLabel.Text = "$100";
             // 
+            // weaponShopLogo
+            // 
+            this.weaponShopLogo.BackColor = System.Drawing.Color.Transparent;
+            this.weaponShopLogo.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.itemShopLogo;
+            this.weaponShopLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.weaponShopLogo.Location = new System.Drawing.Point(808, 727);
+            this.weaponShopLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.weaponShopLogo.Name = "weaponShopLogo";
+            this.weaponShopLogo.Size = new System.Drawing.Size(276, 254);
+            this.weaponShopLogo.TabIndex = 23;
+            this.weaponShopLogo.TabStop = false;
+            // 
             // FrmLevelCity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -318,6 +332,7 @@
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.city;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1684, 976);
+            this.Controls.Add(this.weaponShopLogo);
             this.Controls.Add(this.moneyLabel);
             this.Controls.Add(this.picWall11);
             this.Controls.Add(this.picWall2);
@@ -362,6 +377,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weaponShopLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,6 +405,7 @@
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.Label moneyLabel;
+        public System.Windows.Forms.PictureBox weaponShopLogo;
     }
 }
 

@@ -21,6 +21,25 @@ namespace Fall2020_CSC403_Project {
     }
 
     public void Setup() {
+
+      // Show the energy sword if the player owns it
+      if (player.hasEnergySword)
+        energySword.Visible = true;
+      else
+        energySword.Visible = false;
+
+      // Show the ray gun if the player owns it
+      if (player.hasRayGun)
+        rayGun.Visible = true;
+      else
+        rayGun.Visible = false;
+
+      // Show the tnt if the player owns it
+      if (player.hasTNT)
+        tnt.Visible = true;
+      else
+        tnt.Visible = false;
+
       // update for this enemy
       picEnemy.BackgroundImage = enemy.Img;
       picEnemy.Refresh();
@@ -170,5 +189,45 @@ namespace Fall2020_CSC403_Project {
         }
       }
     }
+
+   private void energySword_Click(object sender, EventArgs e) {
+      enemy.AlterHealth(-100);
+      player.hasEnergySword = false;
+      StopBattleSound();
+      instance = null;
+      Close();
+      PlayWorldSound();
+   }
+
+  private void rayGun_Click(object sender, EventArgs e) {
+     enemy.AlterHealth(-8);
+     player.AlterHealth(-2);
+     UpdateHealthBars();
+
+    if (player.Health <= 0) {
+        StopBattleSound();
+        PlayDeathSound();
+        instance = null;
+        Close();
+        ShowDeathWindow();
+      }
+
+      if (enemy.Health <= 0) {
+        StopBattleSound();
+        //SoundPlayer winSound = new SoundPlayer(Resources.win_music);
+        //winSound.Play();
+        instance = null;
+        Close();
+        PlayWorldSound();
+      }
   }
+
+  private void tnt_Click(object sender, EventArgs e) {
+    StopBattleSound();
+    PlayDeathSound();
+    instance = null;
+    Close();
+    ShowDeathWindow();
+  }
+ }
 }

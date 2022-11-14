@@ -15,6 +15,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
     private Character[] walls;
+    private Character weaponShop;
     // private DateTime timeBegin; - never used. From Cherry.
     private FrmBattle frmBattle;
     private SoundPlayer worldSound;
@@ -24,6 +25,7 @@ namespace Fall2020_CSC403_Project {
     private Stopwatch timer;
     private Tuple<Key, Vector2>[] KeyBindings;
     private FrmPause frmPause; 
+    private FrmWeaponShop frmWeaponShop;
 
     public FrmLevelBakery() {
       InitializeComponent();
@@ -41,6 +43,8 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+
+      weaponShop = new Character(CreatePosition(weaponShopLogo), CreateCollider(weaponShopLogo, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
@@ -117,6 +121,16 @@ namespace Fall2020_CSC403_Project {
         player.MoveBack();
       }
 
+      // check collision with weapon shop
+      if (HitAChar(player, weaponShop)) { 
+        player.ResetMoveSpeed();
+        player.MoveBack();
+        frmWeaponShop = FrmWeaponShop.GetInstance(player);
+        frmWeaponShop.FormClosed += closeWeaponShop;
+        frmWeaponShop.updateMoneyLabel();
+        frmWeaponShop.ShowDialog();
+      }
+
       // check collision with enemies
       if (HitAChar(player, enemyPoisonPacket)) {
         Fight(enemyPoisonPacket);
@@ -151,6 +165,13 @@ namespace Fall2020_CSC403_Project {
 
       // Enemy has been killed therefore there can be no collision 
       return false;
+    }
+
+    // Function that is called when FrmWeaponShop window is closed
+    private void closeWeaponShop(object sender, FormClosedEventArgs e) {
+
+        // Ensuring the money label is properly updated after going to the weapon shop
+        this.moneyLabel.Text = "$" + player.showMoney();
     }
 
     private void Fight(Enemy enemy) {

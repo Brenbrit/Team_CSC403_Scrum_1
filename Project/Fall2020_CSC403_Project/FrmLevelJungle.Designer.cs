@@ -51,6 +51,7 @@
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
             this.moneyLabel = new System.Windows.Forms.Label();
+            this.weaponShopLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weaponShopLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -244,7 +246,7 @@
             this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
             this.picEnemyCheeto.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.milk;
             this.picEnemyCheeto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picEnemyCheeto.Location = new System.Drawing.Point(1102, 757);
+            this.picEnemyCheeto.Location = new System.Drawing.Point(961, 757);
             this.picEnemyCheeto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picEnemyCheeto.Name = "picEnemyCheeto";
             this.picEnemyCheeto.Size = new System.Drawing.Size(278, 254);
@@ -310,13 +312,25 @@
             this.moneyLabel.TabIndex = 20;
             this.moneyLabel.Text = "$100";
             // 
+            // weaponShopLogo
+            // 
+            this.weaponShopLogo.BackColor = System.Drawing.Color.Transparent;
+            this.weaponShopLogo.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.itemShopLogo;
+            this.weaponShopLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.weaponShopLogo.Location = new System.Drawing.Point(1297, 785);
+            this.weaponShopLogo.Name = "weaponShopLogo";
+            this.weaponShopLogo.Size = new System.Drawing.Size(336, 226);
+            this.weaponShopLogo.TabIndex = 23;
+            this.weaponShopLogo.TabStop = false;
+            // 
             // FrmLevelJungle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1764, 1117);
+            this.ClientSize = new System.Drawing.Size(1550, 1135);
+            this.Controls.Add(this.weaponShopLogo);
             this.Controls.Add(this.moneyLabel);
             this.Controls.Add(this.picWall11);
             this.Controls.Add(this.picWall2);
@@ -361,6 +375,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weaponShopLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,6 +403,7 @@
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.Label moneyLabel;
+        private System.Windows.Forms.PictureBox weaponShopLogo;
     }
 }
 

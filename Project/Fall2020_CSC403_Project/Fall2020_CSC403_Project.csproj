@@ -60,6 +60,12 @@
     <Compile Include="FrmBattle.Designer.cs">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmWeaponShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWeaponShop.Designer.cs">
+      <DependentUpon>FrmWeaponShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLevelBakery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCharSelect.resx">
       <DependentUpon>FrmCharSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWeaponShop.resx">
+      <DependentUpon>FrmWeaponShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLevelBakery.resx">
       <DependentUpon>FrmLevelBakery.cs</DependentUpon>
@@ -179,10 +188,13 @@
     <Content Include="data\city.jpg" />
     <Content Include="data\cobblestone.png" />
     <Content Include="data\cocopuffs.png" />
+    <Content Include="data\energysword.png" />
     <Content Include="data\Flo.jpg" />
     <Content Include="data\guice.jpg" />
     <Content Include="data\IESB.jpg" />
     <Content Include="data\iesb_boss.wav" />
+    <Content Include="data\itemshop.jpg" />
+    <Content Include="data\itemShopLogo.png" />
     <Content Include="data\jungle.jpg" />
     <Content Include="data\knife.png" />
     <Content Include="data\kyle.jpeg" />
@@ -190,6 +202,8 @@
     <Content Include="data\mossycobblestone.png" />
     <Content Include="data\oven.jpg" />
     <Content Include="data\pauseMenuBackground.jpg" />
+    <Content Include="data\raygun.png" />
+    <Content Include="data\tnt.jpg" />
     <Content Include="data\yeast.jpg" />
     <None Include="Resources\prather.jpg" />
     <None Include="Resources\prather.bmp" />
