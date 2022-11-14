@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Media;
+using Fall2020_CSC403_Project.Properties;
 
 namespace Fall2020_CSC403_Project
 {
@@ -16,16 +18,24 @@ namespace Fall2020_CSC403_Project
     {
         private Player player;
         public static FrmWeaponShop instance = null;
+        private SoundPlayer shopMusic;
+
         public FrmWeaponShop(Player shopDweller) {
             InitializeComponent();
             this.player = shopDweller;
+            shopMusic = new SoundPlayer(Resources.hotlineshop);
         }
 
         public static FrmWeaponShop GetInstance(Player shopDweller) { 
             if (instance == null)
                 instance = new FrmWeaponShop(shopDweller);
 
+            instance.playShopMusic();
             return instance;
+        }
+
+        private void playShopMusic() {
+            shopMusic.PlayLooping();
         }
 
         private void FrmItemShop_Load(object sender, EventArgs e) {
@@ -112,6 +122,10 @@ namespace Fall2020_CSC403_Project
         private void leaveButton_Click(object sender, EventArgs e) {
             MessageBox.Show("Churry along now I have plenty of customers waiting!", "CHURRY SAYS");
             this.Close();
+        }
+
+        private void weaponShopClosed(object sender, FormClosedEventArgs e) { 
+            shopMusic.Stop();
         }
     }
 }
