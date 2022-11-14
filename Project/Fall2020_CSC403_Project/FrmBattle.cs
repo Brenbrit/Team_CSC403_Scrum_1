@@ -39,12 +39,20 @@ namespace Fall2020_CSC403_Project {
 
       // Has enemy been hit by car?
       if (player.InCar) {
+        // disable buttons
+        btnAttack.Enabled = false;
+        btnFlee.Enabled = false;
+
         crashSound = new SoundPlayer(Resources.car_crash);
         playMusic = false;
         // Wait for sound to finish playing
         await Task.Run(() => { crashSound.PlaySync(); });
         player.OnAttack(-4);
         playMusic = PlayMusic;
+
+        // re-enable buttons
+        btnAttack.Enabled = true;
+        btnFlee.Enabled = true;
       }
 
       if (playMusic) {
