@@ -85,6 +85,7 @@
             this.Play.TabIndex = 5;
             this.Play.Text = "PLAY";
             this.Play.UseVisualStyleBackColor = true;
+            this.Play.Click += new System.EventHandler(this.Play_Click);
             // 
             // Exit
             // 
@@ -95,6 +96,7 @@
             this.Exit.TabIndex = 6;
             this.Exit.Text = "EXIT";
             this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // FrmTitle
             // 
@@ -109,7 +111,7 @@
             this.Controls.Add(this.note);
             this.Controls.Add(this.title);
             this.Name = "FrmTitle";
-            this.Text = "once upon a time there was a very bored college professor...";
+            this.Text = "Team TEAM Presents...";
             this.ResumeLayout(false);
             this.PerformLayout();
 

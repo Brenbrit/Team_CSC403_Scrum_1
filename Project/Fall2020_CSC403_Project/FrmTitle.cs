@@ -12,14 +12,22 @@ namespace Fall2020_CSC403_Project
 {
     public partial class FrmTitle : Form
     {
+        public static FrmTitle instance = null;
         public FrmTitle()
         {
             InitializeComponent();
         }
 
-        private void presents_Click(object sender, EventArgs e)
+        private void Play_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FrmCharSelect CharSelect = new FrmCharSelect();
+            CharSelect.Show();
+        }
 
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
