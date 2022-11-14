@@ -50,6 +50,8 @@
       this.picWall1 = new System.Windows.Forms.PictureBox();
       this.picWall2 = new System.Windows.Forms.PictureBox();
       this.picWall11 = new System.Windows.Forms.PictureBox();
+      this.moneyLabel = new System.Windows.Forms.Label();
+      this.heal1 = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -67,6 +69,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.heal1)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -142,7 +145,7 @@
       this.picPlayer.BackColor = System.Drawing.Color.Transparent;
       this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Martin;
       this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picPlayer.Location = new System.Drawing.Point(317, 516);
+      this.picPlayer.Location = new System.Drawing.Point(297, 516);
       this.picPlayer.Name = "picPlayer";
       this.picPlayer.Size = new System.Drawing.Size(54, 106);
       this.picPlayer.TabIndex = 0;
@@ -208,9 +211,9 @@
       this.picWall10.BackColor = System.Drawing.Color.Transparent;
       this.picWall10.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
       this.picWall10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWall10.Location = new System.Drawing.Point(653, 89);
+      this.picWall10.Location = new System.Drawing.Point(692, 89);
       this.picWall10.Name = "picWall10";
-      this.picWall10.Size = new System.Drawing.Size(228, 162);
+      this.picWall10.Size = new System.Drawing.Size(189, 162);
       this.picWall10.TabIndex = 11;
       this.picWall10.TabStop = false;
       // 
@@ -280,6 +283,29 @@
       this.picWall11.TabIndex = 17;
       this.picWall11.TabStop = false;
       // 
+      // moneyLabel
+      // 
+      this.moneyLabel.BackColor = System.Drawing.Color.Green;
+      this.moneyLabel.Font = new System.Drawing.Font("Elephant", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.moneyLabel.ForeColor = System.Drawing.SystemColors.Window;
+      this.moneyLabel.Location = new System.Drawing.Point(11, 37);
+      this.moneyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.moneyLabel.Name = "moneyLabel";
+      this.moneyLabel.Size = new System.Drawing.Size(101, 22);
+      this.moneyLabel.TabIndex = 22;
+      this.moneyLabel.Text = "$100";
+      // 
+      // heal1
+      // 
+      this.heal1.BackColor = System.Drawing.Color.Transparent;
+      this.heal1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.health;
+      this.heal1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.heal1.Location = new System.Drawing.Point(614, 79);
+      this.heal1.Name = "heal1";
+      this.heal1.Size = new System.Drawing.Size(72, 93);
+      this.heal1.TabIndex = 23;
+      this.heal1.TabStop = false;
+      // 
       // FrmLevelCity
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,7 +313,9 @@
       this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
       this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.city;
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.ClientSize = new System.Drawing.Size(1176, 726);
+      this.ClientSize = new System.Drawing.Size(1123, 634);
+      this.Controls.Add(this.heal1);
+      this.Controls.Add(this.moneyLabel);
       this.Controls.Add(this.picWall11);
       this.Controls.Add(this.picWall2);
       this.Controls.Add(this.picWall8);
@@ -330,6 +358,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.heal1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -356,6 +385,8 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
+    private System.Windows.Forms.Label moneyLabel;
+    private System.Windows.Forms.PictureBox heal1;
   }
 }
 

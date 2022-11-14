@@ -1,6 +1,6 @@
 ﻿namespace Fall2020_CSC403_Project
 {
-  partial class FrmLevelJungle
+  partial class aaa
   {
     /// <summary>
     /// Required designer variable.
@@ -29,7 +29,7 @@
     private void InitializeComponent()
     {
       this.components = new System.ComponentModel.Container();
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevelJungle));
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aaa));
       this.lblInGameTime = new System.Windows.Forms.Label();
       this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
       this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
@@ -50,6 +50,8 @@
       this.picWall3 = new System.Windows.Forms.PictureBox();
       this.picBossKoolAid = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
+      this.moneyLabel = new System.Windows.Forms.Label();
+      this.heal1 = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
@@ -67,6 +69,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.heal1)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -280,13 +283,38 @@
       this.picPlayer.TabIndex = 0;
       this.picPlayer.TabStop = false;
       // 
-      // FrmLevelJungle
+      // moneyLabel
+      // 
+      this.moneyLabel.BackColor = System.Drawing.Color.Green;
+      this.moneyLabel.Font = new System.Drawing.Font("Elephant", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.moneyLabel.ForeColor = System.Drawing.SystemColors.Window;
+      this.moneyLabel.Location = new System.Drawing.Point(11, 40);
+      this.moneyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.moneyLabel.Name = "moneyLabel";
+      this.moneyLabel.Size = new System.Drawing.Size(101, 22);
+      this.moneyLabel.TabIndex = 20;
+      this.moneyLabel.Text = "$100";
+      // 
+      // heal1
+      // 
+      this.heal1.BackColor = System.Drawing.Color.Transparent;
+      this.heal1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.health;
+      this.heal1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.heal1.Location = new System.Drawing.Point(366, 548);
+      this.heal1.Name = "heal1";
+      this.heal1.Size = new System.Drawing.Size(77, 102);
+      this.heal1.TabIndex = 21;
+      this.heal1.TabStop = false;
+      // 
+      // aaa
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.ClientSize = new System.Drawing.Size(1176, 726);
+      this.Controls.Add(this.heal1);
+      this.Controls.Add(this.moneyLabel);
       this.Controls.Add(this.picWall11);
       this.Controls.Add(this.picWall2);
       this.Controls.Add(this.picWall8);
@@ -306,7 +334,7 @@
       this.Controls.Add(this.picBossKoolAid);
       this.Controls.Add(this.picPlayer);
       this.DoubleBuffered = true;
-      this.Name = "FrmLevelJungle";
+      this.Name = "aaa";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
       this.Text = "Explore";
       this.Load += new System.EventHandler(this.FrmLevel_Load);
@@ -329,6 +357,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.heal1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -355,6 +384,8 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-  }
+        private System.Windows.Forms.Label moneyLabel;
+        private System.Windows.Forms.PictureBox heal1;
+    }
 }
 
