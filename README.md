@@ -113,3 +113,9 @@ Key bindings can be altered by changing the `KeyBindings` array in `FrmLevel.cs`
 
 ### New characters and character select screen - John
 Users are met with a character select screen when opening the game. Depending on their choice, the character chosen will be used for the duration of their play time. Characters are: MrPeanut, Toucan_Sam, Doughboy, and Martin. `Program.cs` now calls on `FrmCharSelect.cs` rather than `FrmLevel.cs` now. 
+
+<br/>
+
+### Kill Or Spare - Kennedy
+
+Once the player defeats an enemy, they are prompted with a new window that lets them either kill or spare their foe. These results are kept up with in a ratio variable. If the player kills the enemy, their ratio is decremented. If the player spares  the enemy, their ratio is incremented. Once the player reaches the big boss (iesb boss), the player's ratio is evaluated. If the ratio is greater than or equal to zero, then the player's strength is boosted by 2x.
