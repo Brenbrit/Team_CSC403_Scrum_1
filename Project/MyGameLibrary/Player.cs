@@ -8,8 +8,14 @@ namespace Fall2020_CSC403_Project.code {
   public class Player : BattleCharacter {
 
         private Int32 money;
+        public bool hasEnergySword;
+        public bool hasRayGun;
+        public bool hasTNT;
     public Player(Vector2 initPos, Collider collider) : base(initPos, collider) {
         money = 0;
+        hasEnergySword = false;
+        hasRayGun = false;
+        hasTNT = false;
     }
 
     public Int32 showMoney() { 
