@@ -50,6 +50,8 @@
       this.picWall3 = new System.Windows.Forms.PictureBox();
       this.picBossKoolAid = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
+      this.picCar = new System.Windows.Forms.PictureBox();
+      this.picCarPlayer = new System.Windows.Forms.PictureBox();
       this.moneyLabel = new System.Windows.Forms.Label();
       this.heal1 = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
@@ -70,6 +72,8 @@
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.heal1)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCarPlayer)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -233,7 +237,7 @@
       this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
       this.picEnemyCheeto.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.milk;
       this.picEnemyCheeto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picEnemyCheeto.Location = new System.Drawing.Point(735, 492);
+      this.picEnemyCheeto.Location = new System.Drawing.Point(893, 485);
       this.picEnemyCheeto.Name = "picEnemyCheeto";
       this.picEnemyCheeto.Size = new System.Drawing.Size(185, 165);
       this.picEnemyCheeto.TabIndex = 5;
@@ -306,6 +310,29 @@
       this.heal1.TabIndex = 21;
       this.heal1.TabStop = false;
       // 
+      // picCar
+      // 
+      this.picCar.BackColor = System.Drawing.Color.Transparent;
+      this.picCar.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carJungle;
+      this.picCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.picCar.Location = new System.Drawing.Point(621, 485);
+      this.picCar.Name = "picCar";
+      this.picCar.Size = new System.Drawing.Size(151, 123);
+      this.picCar.TabIndex = 18;
+      this.picCar.TabStop = false;
+      // 
+      // picCarPlayer
+      // 
+      this.picCarPlayer.BackColor = System.Drawing.Color.Transparent;
+      this.picCarPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.carJungleCharacter;
+      this.picCarPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.picCarPlayer.Location = new System.Drawing.Point(513, 302);
+      this.picCarPlayer.Name = "picCarPlayer";
+      this.picCarPlayer.Size = new System.Drawing.Size(151, 123);
+      this.picCarPlayer.TabIndex = 19;
+      this.picCarPlayer.TabStop = false;
+      this.picCarPlayer.Visible = false;
+      // 
       // aaa
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +360,8 @@
       this.Controls.Add(this.picWall3);
       this.Controls.Add(this.picBossKoolAid);
       this.Controls.Add(this.picPlayer);
+      this.Controls.Add(this.picCarPlayer);
+      this.Controls.Add(this.picCar);
       this.DoubleBuffered = true;
       this.Name = "aaa";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -358,9 +387,10 @@
       ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.heal1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCar)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picCarPlayer)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
-
     }
 
     #endregion
@@ -384,8 +414,11 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
     public System.Windows.Forms.PictureBox picPlayer;
-        private System.Windows.Forms.Label moneyLabel;
-        private System.Windows.Forms.PictureBox heal1;
+    private System.Windows.Forms.PictureBox picCar;
+    private System.Windows.Forms.PictureBox picCarPlayer;
+    private System.Windows.Forms.Label moneyLabel;
+    private System.Windows.Forms.PictureBox heal1;
+    // private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

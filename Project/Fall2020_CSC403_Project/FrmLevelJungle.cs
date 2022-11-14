@@ -14,6 +14,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
+    private Enemy car;
     private Enemy heal;
     private Character[] walls;
     // private DateTime timeBegin; - never used. From Cherry.
@@ -24,7 +25,9 @@ namespace Fall2020_CSC403_Project {
     private bool isPaused;
     private Stopwatch timer;
     private Tuple<Key, Vector2>[] KeyBindings;
-    private FrmPause frmPause; 
+    private FrmPause frmPause;
+
+    private Image playerCarImg;
 
     public aaa() {
       InitializeComponent();
@@ -42,15 +45,19 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      car = new Enemy(CreatePosition(picCar), CreateCollider(picCar, PADDING));
       heal = new Enemy(CreatePosition(heal1), CreateCollider(heal1, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+      car.Img = picCar.BackgroundImage;
 
       bossKoolaid.Color = Color.Red;
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+
+      playerCarImg = global::Fall2020_CSC403_Project.Properties.Resources.carBakeryCharacter;
 
       walls = new Character[NUM_WALLS];
       for (int w = 0; w < NUM_WALLS; w++) {
@@ -126,6 +133,9 @@ namespace Fall2020_CSC403_Project {
       else if (HitAChar(player, enemyCheeto)) {
         Fight(enemyCheeto);
       }
+      else if (HitAChar(player, car)) {
+        boardCar();
+      }
       else if (HitAChar(player, heal))
       {
         player.Health += 15;
@@ -138,6 +148,20 @@ namespace Fall2020_CSC403_Project {
 
       // update player's picture box
       picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+    }
+
+    private void boardCar() {
+
+      // change player's image (lots of code)
+      picPlayer.BackColor = picCarPlayer.BackColor;
+      picPlayer.BackgroundImage = picCarPlayer.BackgroundImage;
+      picPlayer.BackgroundImageLayout = picCarPlayer.BackgroundImageLayout;
+      picPlayer.Size = picCarPlayer.Size;
+      picPlayer.Location = picCar.Location;
+
+      removeEnemy(car);
+      player.Collider = CreateCollider(picCarPlayer, 7);
+      player.BoardCar();
     }
 
     private bool HitAWall(Character c) {
@@ -165,7 +189,7 @@ namespace Fall2020_CSC403_Project {
       player.ResetMoveSpeed();
       player.MoveBack();
       worldSound.Stop();
-      frmBattle = FrmBattle.GetInstance(enemy);
+      frmBattle = FrmBattle.GetInstance(enemy, true);
 
        // battleOver function will be called when frmBattle window is closed
       frmBattle.FormClosed += battleOver;
@@ -260,6 +284,10 @@ namespace Fall2020_CSC403_Project {
             enemyCheeto = null;
             picEnemyCheeto.Visible = false;
         }   
+        else if (enemy == car) {
+            car = null;
+            picCar.Visible = false;
+        }
         else { 
             bossKoolaid = null;
             picBossKoolAid.Visible = false;

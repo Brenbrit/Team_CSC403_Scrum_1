@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -201,6 +201,15 @@
     <Content Include="data\oven.jpg" />
     <Content Include="data\pauseMenuBackground.jpg" />
     <Content Include="data\yeast.jpg" />
+    <None Include="Resources\car_crash.wav" />
+    <None Include="Resources\carCity.png" />
+    <None Include="Resources\carBakeryCharacter.png" />
+    <None Include="Resources\carBakery.png" />
+    <None Include="Resources\carJungleCharacter.png" />
+    <None Include="Resources\carJungle.png" />
+    <None Include="Resources\carIESBCharacter.png" />
+    <None Include="Resources\carIESB.png" />
+    <None Include="Resources\carCityCharacter.png" />
     <None Include="Resources\prather.jpg" />
     <None Include="Resources\prather.bmp" />
     <None Include="Resources\iesb_boss.bmp" />
