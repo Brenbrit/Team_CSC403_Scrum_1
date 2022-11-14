@@ -29,5 +29,15 @@ namespace Fall2020_CSC403_Project
         {
             Application.Exit();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmTitle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
