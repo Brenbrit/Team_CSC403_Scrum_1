@@ -190,7 +190,10 @@ namespace Fall2020_CSC403_Project {
       player.MoveBack();
       worldSound.Stop();
 
-      frmBattle = FrmBattle.GetInstance(enemy);
+      if (enemy == bossKoolaid)
+        frmBattle = FrmBattle.GetInstance(enemy, false);
+      else
+        frmBattle = FrmBattle.GetInstance(enemy, true);
 
        // battleOver function will be called when frmBattle window is closed
       frmBattle.FormClosed += battleOver;

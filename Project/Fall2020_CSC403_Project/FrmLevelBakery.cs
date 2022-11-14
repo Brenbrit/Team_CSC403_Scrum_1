@@ -189,7 +189,7 @@ namespace Fall2020_CSC403_Project {
       player.ResetMoveSpeed();
       player.MoveBack();
       worldSound.Stop();
-      frmBattle = FrmBattle.GetInstance(enemy);
+      frmBattle = FrmBattle.GetInstance(enemy, true);
 
        // battleOver function will be called when frmBattle window is closed
       frmBattle.FormClosed += battleOver;

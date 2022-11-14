@@ -3,6 +3,7 @@ using Fall2020_CSC403_Project.Properties;
 using System;
 using System.Drawing;
 using System.Media;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,7 @@ namespace Fall2020_CSC403_Project {
     private SoundPlayer battleSound;
     private SoundPlayer worldSound;
     private SoundPlayer crashSound;
+    private Boolean playMusic;
 
     private FrmBattle() {
       InitializeComponent();
@@ -22,7 +24,7 @@ namespace Fall2020_CSC403_Project {
       lblFleeStatus.Text = "";
     }
 
-    public async void Setup() {
+    public async void Setup(Boolean PlayMusic) {
       // update for this enemy
       picEnemy.BackgroundImage = enemy.Img;
       picEnemy.Refresh();
@@ -33,16 +35,22 @@ namespace Fall2020_CSC403_Project {
       enemy.AttackEvent += PlayerDamage;
       player.AttackEvent += EnemyDamage;
 
+      this.playMusic = PlayMusic;
+
       // Has enemy been hit by car?
       if (player.InCar) {
         crashSound = new SoundPlayer(Resources.car_crash);
+        playMusic = false;
         // Wait for sound to finish playing
         await Task.Run(() => { crashSound.PlaySync(); });
         player.OnAttack(-4);
+        playMusic = PlayMusic;
       }
 
-      battleSound = new SoundPlayer(Resources.battle_music);
-      battleSound.PlayLooping();
+      if (playMusic) {
+        battleSound = new SoundPlayer(Resources.battle_music);
+        battleSound.PlayLooping();
+      }
 
       // show health
       UpdateHealthBars();
@@ -59,11 +67,11 @@ namespace Fall2020_CSC403_Project {
       tmrFinalBattle.Enabled = true;
     }
 
-    public static FrmBattle GetInstance(Enemy enemy) {
+    public static FrmBattle GetInstance(Enemy enemy, Boolean PlayMusic) {
       if (instance == null) {
         instance = new FrmBattle();
         instance.enemy = enemy;
-        instance.Setup();
+        instance.Setup(PlayMusic);
       }
       return instance;
     }
@@ -97,7 +105,9 @@ namespace Fall2020_CSC403_Project {
     }
 
     private void StopBattleSound() {
-      battleSound.Stop();
+      if (playMusic) {
+        battleSound.Stop();
+      }
     }
 
     private void btnAttack_Click(object sender, EventArgs e) {
