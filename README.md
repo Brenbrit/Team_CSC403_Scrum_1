@@ -116,6 +116,6 @@ Users are met with a character select screen when opening the game. Depending on
 
  <br/>
  
- ### Title Screen
+ ### Title Screen - Kennedy
  
  When the player first starts the game, they were originally thrown straight into the game. Then, we added the character selection feature and started the game with that window. Now, before you get to the character select window, you are greated by a title screen. You can either push the play button and choose your character or you can exit, which will close the entire application's process.
