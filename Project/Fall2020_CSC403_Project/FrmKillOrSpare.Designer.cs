@@ -55,6 +55,7 @@
             this.Kill.TabIndex = 1;
             this.Kill.Text = "KILL";
             this.Kill.UseVisualStyleBackColor = true;
+            this.Kill.Click += new System.EventHandler(this.Kill_Click);
             // 
             // Spare
             // 
@@ -66,6 +67,7 @@
             this.Spare.TabIndex = 2;
             this.Spare.Text = "SPARE";
             this.Spare.UseVisualStyleBackColor = true;
+            this.Spare.Click += new System.EventHandler(this.Spare_Click);
             // 
             // FrmKillOrSpare
             // 

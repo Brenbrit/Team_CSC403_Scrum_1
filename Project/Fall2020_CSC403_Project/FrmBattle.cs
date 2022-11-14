@@ -13,6 +13,9 @@ namespace Fall2020_CSC403_Project {
     private Player player;
     private SoundPlayer battleSound;
     private SoundPlayer worldSound;
+    private FrmKillOrSpare choice = new FrmKillOrSpare();
+    public int choice_ratio = 0;
+
 
     private FrmBattle() {
       InitializeComponent();
@@ -118,7 +121,11 @@ namespace Fall2020_CSC403_Project {
         //winSound.Play();
         instance = null;
         Close();
-        PlayWorldSound();
+        choice.ShowDialog();
+        choice_ratio =+ choice.getRatio();
+        Console.WriteLine(choice.getRatio());
+        Console.WriteLine(choice_ratio);
+        //PlayWorldSound();
       }
     }
 
