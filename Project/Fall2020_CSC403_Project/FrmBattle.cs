@@ -122,7 +122,10 @@ namespace Fall2020_CSC403_Project {
         instance = null;
         Close();
         choice.ShowDialog();
-        choice_ratio =+ choice.getRatio();
+        Console.WriteLine(choice_ratio);
+        Console.WriteLine(choice.getRatio());
+        choice_ratio = choice_ratio + choice.getRatio();
+        Console.WriteLine(choice_ratio);
         PlayWorldSound();
       }
     }
