@@ -134,6 +134,7 @@ namespace Fall2020_CSC403_Project {
       if (HitAChar(player, weaponShop)) { 
         player.ResetMoveSpeed();
         player.MoveBack();
+        worldSound.Stop();
         frmWeaponShop = FrmWeaponShop.GetInstance(player);
         frmWeaponShop.FormClosed += closeWeaponShop;
         frmWeaponShop.updateMoneyLabel();
@@ -204,6 +205,8 @@ namespace Fall2020_CSC403_Project {
 
         // Ensuring the money label is properly updated after going to the weapon shop
         this.moneyLabel.Text = "$" + player.showMoney();
+
+        worldSound.PlayLooping();
     }
 
     private void Fight(Enemy enemy) {

@@ -9,21 +9,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Media;
+using Fall2020_CSC403_Project.Properties;
+using System.Runtime.CompilerServices;
 
 namespace Fall2020_CSC403_Project
 {
     public partial class FrmWeaponShop : Form
     {
         private Player player;
+        private SoundPlayer shopSound;
         public static FrmWeaponShop instance = null;
         public FrmWeaponShop(Player shopDweller) {
             InitializeComponent();
             this.player = shopDweller;
+            shopSound = new SoundPlayer(Resources.hotlineshop);
         }
 
         public static FrmWeaponShop GetInstance(Player shopDweller) { 
             if (instance == null)
                 instance = new FrmWeaponShop(shopDweller);
+
+            instance.shopSound.PlayLooping();
 
             return instance;
         }
@@ -105,6 +112,16 @@ namespace Fall2020_CSC403_Project
         private void onMouseLeaveTNTButton(object sender, EventArgs e) {
             tntButton.BackColor = Color.Green;
         }
+
+        private void onMouseEnterLeaveButton(object sender, EventArgs e) {
+            leaveButton.BackColor = Color.LightCoral;
+            leaveButton.Font = new Font("Wingdings", leaveButton.Font.Size);
+        }
+
+        private void onMouseLeaveTheLeaveButton(object sender, EventArgs e) {
+            leaveButton.BackColor = Color.Red;
+            leaveButton.Font = new Font("Comic Sans MS Bold", leaveButton.Font.Size, FontStyle.Bold);
+        }
         public void updateMoneyLabel() {
             this.moneyLabel.Text = "$" + player.showMoney();
         }
@@ -112,6 +129,10 @@ namespace Fall2020_CSC403_Project
         private void leaveButton_Click(object sender, EventArgs e) {
             MessageBox.Show("Churry along now I have plenty of customers waiting!", "CHURRY SAYS");
             this.Close();
+        }
+
+        private void shopClosed(object sender, FormClosedEventArgs e) { 
+            shopSound.Stop();
         }
     }
 }

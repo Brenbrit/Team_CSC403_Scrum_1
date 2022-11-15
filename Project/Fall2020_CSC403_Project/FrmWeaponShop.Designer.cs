@@ -149,6 +149,8 @@ namespace Fall2020_CSC403_Project
             this.leaveButton.TabIndex = 10;
             this.leaveButton.Text = "LEAVE ";
             this.leaveButton.UseVisualStyleBackColor = false;
+            this.leaveButton.MouseEnter += new System.EventHandler(this.onMouseEnterLeaveButton);
+            this.leaveButton.MouseLeave += new System.EventHandler(this.onMouseLeaveTheLeaveButton);
             this.leaveButton.Click += new System.EventHandler(this.leaveButton_Click);
             // 
             // FrmWeaponShop
@@ -169,6 +171,7 @@ namespace Fall2020_CSC403_Project
             this.Controls.Add(this.energySwordButton);
             this.Name = "FrmWeaponShop";
             this.Text = "FrmItemShop";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.shopClosed);
             this.ResumeLayout(false);
 
         }
