@@ -149,11 +149,11 @@ Players can now earn money after defeating enemies. Each enemy defeated gives th
 
 ### Weapon Shop - Josh
 A weapon shop has been added to each level in the game. Players can use money, earned by defeating enemies, to purchase weapons in the shop. A new window, named `FrmWeaponShop.cs` was created to act as the interface for the weapon shop. Players can purchase three weapons from the shop: an energy sword, a ray gun, and TNT. The cost & capabilities of these weapons are as follows:
-####Energy Sword ($200)
+#### Energy Sword ($200)
 Players must defeat two enemies in order to buy this weapon. If used in battle, the enemy will be killed in one hit. However, this weapon can                     only be used once. 
-####Ray Gun ($100)
+#### Ray Gun ($100)
 Players need only to defeat one enemy to purchase this weapon. When used in battle, it does double the damage of a normal attack. However, the                      player also loses 2 health each time they use this weapon
-####TNT ($0)
+#### TNT ($0)
  Free does not mean good ;)
 
 When weapons are purchased, they appear inside of the `FrmBattle.cs` window as buttons. Three boolean variables were created inside of `Player.cs` to check if players have any of the three weapons, and if they do, their corresponding button appears during battle. 
