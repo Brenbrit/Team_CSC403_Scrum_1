@@ -23,6 +23,7 @@
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
+            /*
             this.components = new System.ComponentModel.Container();
             this.lblInGameTime = new System.Windows.Forms.Label();
             this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
@@ -392,7 +393,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-=======
+=======*/
       this.components = new System.ComponentModel.Container();
       this.lblInGameTime = new System.Windows.Forms.Label();
       this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
@@ -803,7 +804,7 @@
     private System.Windows.Forms.PictureBox picCar;
     private System.Windows.Forms.PictureBox picCarPlayer;
     private System.Windows.Forms.PictureBox picWall13;
-    private System.Windows.Forms.Label moneyLabel;
+//  private System.Windows.Forms.Label moneyLabel;
     private System.Windows.Forms.PictureBox heal1;
     }
 }

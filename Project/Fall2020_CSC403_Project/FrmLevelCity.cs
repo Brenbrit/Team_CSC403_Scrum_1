@@ -29,7 +29,6 @@ namespace Fall2020_CSC403_Project {
     private Tuple<Key, Vector2>[] KeyBindings;
     private FrmPause frmPause; 
     private FrmWeaponShop frmWeaponShop;
-    private FrmPause frmPause;
     private Image playerCarImg;
 
     public FrmLevelCity() {

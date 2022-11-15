@@ -9,7 +9,7 @@ using System.Windows.Input;
 using KeyEventArgs = System.Windows.Forms.KeyEventArgs;
 
 namespace Fall2020_CSC403_Project {
-  public partial class aaa : Form {
+  public partial class FrmLevelJungle : Form {
     private Player player;
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
@@ -30,7 +30,7 @@ namespace Fall2020_CSC403_Project {
     private FrmWeaponShop frmWeaponShop;
     private Image playerCarImg;
 
-    public aaa() {
+    public FrmLevelJungle() {
       InitializeComponent();
       worldSound = new SoundPlayer(Resources.world_music);
       worldSound.PlayLooping();

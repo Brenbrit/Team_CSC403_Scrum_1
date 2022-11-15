@@ -65,7 +65,7 @@ namespace Fall2020_CSC403_Project
     //ToucanSam Button
     private void ToucanSam_Click(object sender, EventArgs e)
     {
-      aaa game = new aaa(); // create new instance of FrmLevel
+      FrmLevelJungle game = new FrmLevelJungle(); // create new instance of FrmLevel
       game.FormClosed += gameclosed;
       game.Show(); //Show it
       this.Hide();

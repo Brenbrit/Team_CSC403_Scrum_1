@@ -1,6 +1,6 @@
 ﻿namespace Fall2020_CSC403_Project
 {
-  partial class aaa
+  partial class FrmLevelJungle
   {
     /// <summary>
     /// Required designer variable.
@@ -27,7 +27,7 @@
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent()
-    {
+    {/*
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevelJungle));
             this.lblInGameTime = new System.Windows.Forms.Label();
@@ -378,9 +378,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.weaponShopLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            
+            */
       this.components = new System.ComponentModel.Container();
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aaa));
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevelJungle));
       this.lblInGameTime = new System.Windows.Forms.Label();
       this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
       this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
@@ -770,7 +770,7 @@
     private System.Windows.Forms.PictureBox weaponShopLogo;
     private System.Windows.Forms.PictureBox picCar;
     private System.Windows.Forms.PictureBox picCarPlayer;
-    private System.Windows.Forms.Label moneyLabel;
+    // private System.Windows.Forms.Label moneyLabel;
     private System.Windows.Forms.PictureBox heal1;
     // private System.Windows.Forms.PictureBox pictureBox1;
     }

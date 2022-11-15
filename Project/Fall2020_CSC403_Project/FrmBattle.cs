@@ -24,32 +24,30 @@ namespace Fall2020_CSC403_Project {
       lblFleeStatus.Text = "";
     }
 
-    public void Setup() {
-
-      // Show the energy sword if the player owns it
-      if (player.hasEnergySword)
-        energySword.Visible = true;
-      else
-        energySword.Visible = false;
-
-      // Show the ray gun if the player owns it
-      if (player.hasRayGun)
-        rayGun.Visible = true;
-      else
-        rayGun.Visible = false;
-
-      // Show the tnt if the player owns it
-      if (player.hasTNT)
-        tnt.Visible = true;
-      else
-        tnt.Visible = false;
-
     public async void Setup(Boolean PlayMusic) {
       // update for this enemy
       picEnemy.BackgroundImage = enemy.Img;
       picEnemy.Refresh();
       BackColor = enemy.Color;
       picBossBattle.Visible = false;
+
+      // Show the energy sword if the player owns it
+      if (player.hasEnergySword)
+         energySword.Visible = true;
+      else
+         energySword.Visible = false;
+
+      // Show the ray gun if the player owns it
+      if (player.hasRayGun)
+         rayGun.Visible = true;
+      else
+         rayGun.Visible = false;
+
+      // Show the tnt if the player owns it
+      if (player.hasTNT)
+         tnt.Visible = true;
+      else
+         tnt.Visible = false;
 
       // Observer pattern
       enemy.AttackEvent += PlayerDamage;
