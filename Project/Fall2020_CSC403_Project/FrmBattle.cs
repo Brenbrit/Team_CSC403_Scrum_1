@@ -3,6 +3,8 @@ using Fall2020_CSC403_Project.Properties;
 using System;
 using System.Drawing;
 using System.Media;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project {
@@ -15,6 +17,8 @@ namespace Fall2020_CSC403_Project {
     private SoundPlayer worldSound;
     private FrmKillOrSpare choice = new FrmKillOrSpare();
     public int choice_ratio = 0;
+    private SoundPlayer crashSound;
+    private Boolean playMusic;
 
     private FrmBattle() {
       InitializeComponent();
@@ -22,19 +26,59 @@ namespace Fall2020_CSC403_Project {
       lblFleeStatus.Text = "";
     }
 
-    public void Setup() {
+    public async void Setup(Boolean PlayMusic) {
       // update for this enemy
       picEnemy.BackgroundImage = enemy.Img;
       picEnemy.Refresh();
       BackColor = enemy.Color;
       picBossBattle.Visible = false;
 
+      // Show the energy sword if the player owns it
+      if (player.hasEnergySword)
+         energySword.Visible = true;
+      else
+         energySword.Visible = false;
+
+      // Show the ray gun if the player owns it
+      if (player.hasRayGun)
+         rayGun.Visible = true;
+      else
+         rayGun.Visible = false;
+
+      // Show the tnt if the player owns it
+      if (player.hasTNT)
+         tnt.Visible = true;
+      else
+         tnt.Visible = false;
+
       // Observer pattern
       enemy.AttackEvent += PlayerDamage;
       player.AttackEvent += EnemyDamage;
 
-      battleSound = new SoundPlayer(Resources.battle_music);
-      battleSound.PlayLooping();
+      this.playMusic = PlayMusic;
+
+      // Has enemy been hit by car?
+      if (player.InCar) {
+        // disable buttons
+        btnAttack.Enabled = false;
+        btnFlee.Enabled = false;
+
+        crashSound = new SoundPlayer(Resources.car_crash);
+        playMusic = false;
+        // Wait for sound to finish playing
+        await Task.Run(() => { crashSound.PlaySync(); });
+        player.OnAttack(-4);
+        playMusic = PlayMusic;
+
+        // re-enable buttons
+        btnAttack.Enabled = true;
+        btnFlee.Enabled = true;
+      }
+
+      if (playMusic) {
+        battleSound = new SoundPlayer(Resources.battle_music);
+        battleSound.PlayLooping();
+      }
 
       // show health
       UpdateHealthBars();
@@ -52,11 +96,11 @@ namespace Fall2020_CSC403_Project {
       tmrFinalBattle.Enabled = true;
     }
 
-    public static FrmBattle GetInstance(Enemy enemy) {
+    public static FrmBattle GetInstance(Enemy enemy, Boolean PlayMusic) {
       if (instance == null) {
         instance = new FrmBattle();
         instance.enemy = enemy;
-        instance.Setup();
+        instance.Setup(PlayMusic);
       }
       return instance;
     }
@@ -90,7 +134,9 @@ namespace Fall2020_CSC403_Project {
     }
 
     private void StopBattleSound() {
-      battleSound.Stop();
+      if (playMusic) {
+        battleSound.Stop();
+      }
     }
 
     private void btnAttack_Click(object sender, EventArgs e) {
@@ -178,5 +224,45 @@ namespace Fall2020_CSC403_Project {
         }
       }
     }
+
+   private void energySword_Click(object sender, EventArgs e) {
+      enemy.AlterHealth(-100);
+      player.hasEnergySword = false;
+      StopBattleSound();
+      instance = null;
+      Close();
+      PlayWorldSound();
+   }
+
+  private void rayGun_Click(object sender, EventArgs e) {
+     enemy.AlterHealth(-8);
+     player.AlterHealth(-2);
+     UpdateHealthBars();
+
+    if (player.Health <= 0) {
+        StopBattleSound();
+        PlayDeathSound();
+        instance = null;
+        Close();
+        ShowDeathWindow();
+      }
+
+      if (enemy.Health <= 0) {
+        StopBattleSound();
+        //SoundPlayer winSound = new SoundPlayer(Resources.win_music);
+        //winSound.Play();
+        instance = null;
+        Close();
+        PlayWorldSound();
+      }
   }
+
+  private void tnt_Click(object sender, EventArgs e) {
+    StopBattleSound();
+    PlayDeathSound();
+    instance = null;
+    Close();
+    ShowDeathWindow();
+  }
+ }
 }

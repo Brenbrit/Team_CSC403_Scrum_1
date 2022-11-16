@@ -14,7 +14,10 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
+    private Enemy car;
+    private Enemy heal;
     private Character[] walls;
+    private Character weaponShop;
     // private DateTime timeBegin; - never used. From Cherry.
     private FrmBattle frmBattle;
     private SoundPlayer worldSound;
@@ -24,6 +27,9 @@ namespace Fall2020_CSC403_Project {
     private Stopwatch timer;
     private Tuple<Key, Vector2>[] KeyBindings;
     private FrmPause frmPause; 
+    private FrmWeaponShop frmWeaponShop;
+    private Image playerCarImg;
+    
 
     public FrmLevelBakery() {
       InitializeComponent();
@@ -33,7 +39,7 @@ namespace Fall2020_CSC403_Project {
 
     private void FrmLevel_Load(object sender, EventArgs e) {
       const int PADDING = 7;
-      const int NUM_WALLS = 13;
+      const int NUM_WALLS = 14;
       
 
       
@@ -41,14 +47,21 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      car = new Enemy(CreatePosition(picCar), CreateCollider(picCar, PADDING));
+      heal = new Enemy(CreatePosition(heal1), CreateCollider(heal1, PADDING));
+
+      weaponShop = new Character(CreatePosition(weaponShopLogo), CreateCollider(weaponShopLogo, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+      car.Img = picCar.BackgroundImage;
 
       bossKoolaid.Color = Color.Red;
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+
+      playerCarImg = global::Fall2020_CSC403_Project.Properties.Resources.carBakeryCharacter;
 
       walls = new Character[NUM_WALLS];
       for (int w = 0; w < NUM_WALLS; w++) {
@@ -72,6 +85,8 @@ namespace Fall2020_CSC403_Project {
       };
 
       Game.player = player;
+      this.moneyLabel.Text = "$" + player.showMoney();
+
       isPaused = false;
 
       // Initiate Stopwatch instance and start the timer 
@@ -115,6 +130,17 @@ namespace Fall2020_CSC403_Project {
         player.MoveBack();
       }
 
+      // check collision with weapon shop
+      if (HitAChar(player, weaponShop)) { 
+        player.ResetMoveSpeed();
+        player.MoveBack();
+        worldSound.Stop();
+        frmWeaponShop = FrmWeaponShop.GetInstance(player);
+        frmWeaponShop.FormClosed += closeWeaponShop;
+        frmWeaponShop.updateMoneyLabel();
+        frmWeaponShop.ShowDialog();
+      }
+
       // check collision with enemies
       if (HitAChar(player, enemyPoisonPacket)) {
         Fight(enemyPoisonPacket);
@@ -122,12 +148,35 @@ namespace Fall2020_CSC403_Project {
       else if (HitAChar(player, enemyCheeto)) {
         Fight(enemyCheeto);
       }
+      else if (HitAChar(player, car)) {
+        boardCar();
+      }
+      else if (HitAChar(player, heal))
+      {
+        player.Health += 15;
+        heal = null;
+        heal1.Visible = false;
+      }
       if (HitAChar(player, bossKoolaid)) {
         Fight(bossKoolaid);
       }
 
       // update player's picture box
       picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+    }
+
+    private void boardCar() {
+      
+      // change player's image (lots of code)
+      picPlayer.BackColor = picCarPlayer.BackColor;
+      picPlayer.BackgroundImage= picCarPlayer.BackgroundImage;
+      picPlayer.BackgroundImageLayout = picCarPlayer.BackgroundImageLayout;
+      picPlayer.Size = picCarPlayer.Size;
+      picPlayer.Location = picCar.Location;
+
+      removeEnemy(car);
+      player.Collider = CreateCollider(picCarPlayer, 7);
+      player.BoardCar();
     }
 
     private bool HitAWall(Character c) {
@@ -151,11 +200,20 @@ namespace Fall2020_CSC403_Project {
       return false;
     }
 
+    // Function that is called when FrmWeaponShop window is closed
+    private void closeWeaponShop(object sender, FormClosedEventArgs e) {
+
+        // Ensuring the money label is properly updated after going to the weapon shop
+        this.moneyLabel.Text = "$" + player.showMoney();
+
+        worldSound.PlayLooping();
+    }
+
     private void Fight(Enemy enemy) {
       player.ResetMoveSpeed();
       player.MoveBack();
       worldSound.Stop();
-      frmBattle = FrmBattle.GetInstance(enemy);
+      frmBattle = FrmBattle.GetInstance(enemy, true);
 
        // battleOver function will be called when frmBattle window is closed
       frmBattle.FormClosed += battleOver;
@@ -174,10 +232,17 @@ namespace Fall2020_CSC403_Project {
     private void battleOver(object sender, FormClosedEventArgs e) { 
         
         // If the enemy has no health after the battle
-        if (enemyIsDead(frmBattle.enemy))
+        if (enemyIsDead(frmBattle.enemy)) { 
 
             // Remove the enemy from the game
-            removeEnemy(frmBattle.enemy);   
+            removeEnemy(frmBattle.enemy); 
+
+            // Giving the player more money (and consequently more problems)
+            player.giveMoney(100);
+
+            // Updating the money label to show the player's current amount of money
+            this.moneyLabel.Text = "$" + player.showMoney();
+        }
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
@@ -242,7 +307,11 @@ namespace Fall2020_CSC403_Project {
         else if (enemy == enemyCheeto) {
             enemyCheeto = null;
             picEnemyCheeto.Visible = false;
-        }   
+        }
+        else if (enemy == car) {
+            car = null;
+            picCar.Visible = false;
+        }
         else { 
             bossKoolaid = null;
             picBossKoolAid.Visible = false;
@@ -251,6 +320,11 @@ namespace Fall2020_CSC403_Project {
 
     private void lblInGameTime_Click(object sender, EventArgs e) {
         
+    }
+
+    private void heal1_Click(object sender, EventArgs e)
+    {
+
     }
   }
 }

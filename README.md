@@ -119,3 +119,45 @@ Users are met with a character select screen when opening the game. Depending on
 ### Kill Or Spare - Kennedy
 
 Once the player defeats an enemy, they are prompted with a new window that lets them either kill or spare their foe. These results are kept up with in a ratio variable. If the player kills the enemy, their ratio is decremented. If the player spares  the enemy, their ratio is incremented. Once the player reaches the big boss (iesb boss), the player's ratio is evaluated. If the ratio is greater than or equal to zero, then the player's strength is boosted by 2x. (known bugs: the 2x strength addition doesn't seem to be working for some reason. Maybe once it is initialized it cannot be changed? I am unsure.)
+
+### Cars - Brendan
+Users are able to board and ride around in cars. There is currently no functionality to get out of a car. This is done by adding 8 new pictures to the game: one car for each level and a photoshopped version of that car with the player inside.
+
+When a player hits a car in the level, their image and hitbox is changed to that of the car. Their speed is also increased from 3 to 5. Finally, when players hit enemies while in a car the enemy will take a hit of damage.
+
+`Character.cs` had its attribute `Collider` changed to public. This allowed each FrmLevel to set a different collider. In addition, a new function and two new variables have been added to the same file. `CarGo_Inc` is the speed that the player will move once in the car (currently set to 5) and `InCar` is a boolean which dictates whether or not a player is currently in a car (used for battles). `BoardCar()` simply changes the player's speed and `InCar` value.
+
+`FrmBattle.cs` now checks if a player is in a car at the beginning of the fight. If they are, a crashing sound is played and the enemy is dealt a hit of damage. Note: there is a known bug with this. If the player ends the fight before the crashing sound is over, the program will crash because the background music was ordered to stop when it had, in fact, never started. A hotfix for this would be to add a null check to the function which stops the music, but this just results in the battle music playing in the world.
+
+`FrmLevel.cs`'s variants now have two cars each: Cars and player-cars have been added as PictureBoxes. The player-car on each level is invisible and is used once the player hits the real car.
+
+ <br/>
+ 
+ ### Title Screen - Kennedy
+ When the player first starts the game, they were originally thrown straight into the game. Then, we added the character selection feature and started the game with that window. Now, before you get to the character select window, you are greated by a title screen. You can either push the play button and choose your character or you can exit, which will close the entire application's process.
+
+<br/>
+
+### New playable levels
+Users will be able to play a different character based on which level they select. Each level has it's own theme and enemies. The levels are as follows: IESB, Jungle, City, and Bakery. 
+
+### Health Packs
+When colliding with health packs found on each level of the game, the player will heal 15 hp. 
+
+<br/>
+
+### Player Money - Josh
+Players can now earn money after defeating enemies. Each enemy defeated gives the player $100 (non-transferrable to USD as of now). A new class variable was created inside of `Player.cs` appropriately named `private Int32 money`. Two new functions were also added to `Player.cs` to ensure the player's money could be shown, and that in the event of an enemy being defeated, the player could be given money. 
+
+<br/>
+
+### Weapon Shop - Josh
+A weapon shop has been added to each level in the game. Players can use money, earned by defeating enemies, to purchase weapons in the shop. A new window, named `FrmWeaponShop.cs` was created to act as the interface for the weapon shop. Players can purchase three weapons from the shop: an energy sword, a ray gun, and TNT. The cost & capabilities of these weapons are as follows:
+#### Energy Sword ($200)
+Players must defeat two enemies in order to buy this weapon. If used in battle, the enemy will be killed in one hit. However, this weapon can                     only be used once. 
+#### Ray Gun ($100)
+Players need only to defeat one enemy to purchase this weapon. When used in battle, it does double the damage of a normal attack. However, the                      player also loses 2 health each time they use this weapon
+#### TNT ($0)
+ Free does not mean good ;)
+
+When weapons are purchased, they appear inside of the `FrmBattle.cs` window as buttons. Three boolean variables were created inside of `Player.cs` to check if players have any of the three weapons, and if they do, their corresponding button appears during battle. 

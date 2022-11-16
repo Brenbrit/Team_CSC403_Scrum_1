@@ -96,6 +96,18 @@
     <Compile Include="FrmPause.Designer.cs">
       <DependentUpon>FrmPause.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTitle.Designer.cs">
+      <DependentUpon>FrmTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWeaponShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWeaponShop.Designer.cs">
+      <DependentUpon>FrmWeaponShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBattle.resx">
@@ -124,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPause.resx">
       <DependentUpon>FrmPause.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTitle.resx">
+      <DependentUpon>FrmTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWeaponShop.resx">
+      <DependentUpon>FrmWeaponShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,6 +208,8 @@
     <Content Include="data\cocopuffs.png" />
     <Content Include="data\Flo.jpg" />
     <Content Include="data\guice.jpg" />
+    <None Include="data\health.jpg" />
+    <Content Include="data\hotlineshop.wav" />
     <Content Include="data\IESB.jpg" />
     <Content Include="data\iesb_boss.wav" />
     <Content Include="data\jungle.jpg" />
@@ -200,6 +220,15 @@
     <Content Include="data\oven.jpg" />
     <Content Include="data\pauseMenuBackground.jpg" />
     <Content Include="data\yeast.jpg" />
+    <None Include="Resources\car_crash.wav" />
+    <None Include="Resources\carCity.png" />
+    <None Include="Resources\carBakeryCharacter.png" />
+    <None Include="Resources\carBakery.png" />
+    <None Include="Resources\carJungleCharacter.png" />
+    <None Include="Resources\carJungle.png" />
+    <None Include="Resources\carIESBCharacter.png" />
+    <None Include="Resources\carIESB.png" />
+    <None Include="Resources\carCityCharacter.png" />
     <None Include="Resources\prather.jpg" />
     <None Include="Resources\prather.bmp" />
     <None Include="Resources\iesb_boss.bmp" />
