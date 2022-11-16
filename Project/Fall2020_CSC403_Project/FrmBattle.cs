@@ -62,6 +62,9 @@ namespace Fall2020_CSC403_Project {
         // disable buttons
         btnAttack.Enabled = false;
         btnFlee.Enabled = false;
+        energySword.Enabled = false;
+        rayGun.Enabled = false;
+        tnt.Enabled = false;
 
         crashSound = new SoundPlayer(Resources.car_crash);
         playMusic = false;
@@ -73,6 +76,9 @@ namespace Fall2020_CSC403_Project {
         // re-enable buttons
         btnAttack.Enabled = true;
         btnFlee.Enabled = true;
+        energySword.Enabled = true;
+        rayGun.Enabled = true;
+        tnt.Enabled = true;
       }
 
       if (playMusic) {
