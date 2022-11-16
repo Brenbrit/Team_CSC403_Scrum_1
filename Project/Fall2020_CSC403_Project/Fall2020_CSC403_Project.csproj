@@ -60,6 +60,12 @@
     <Compile Include="FrmBattle.Designer.cs">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKillOrSpare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKillOrSpare.Designer.cs">
+      <DependentUpon>FrmKillOrSpare.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLevelBakery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCharSelect.resx">
       <DependentUpon>FrmCharSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKillOrSpare.resx">
+      <DependentUpon>FrmKillOrSpare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLevelBakery.resx">
       <DependentUpon>FrmLevelBakery.cs</DependentUpon>

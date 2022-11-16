@@ -116,6 +116,10 @@ Users are met with a character select screen when opening the game. Depending on
 
 <br/>
 
+### Kill Or Spare - Kennedy
+
+Once the player defeats an enemy, they are prompted with a new window that lets them either kill or spare their foe. These results are kept up with in a ratio variable. If the player kills the enemy, their ratio is decremented. If the player spares  the enemy, their ratio is incremented. Once the player reaches the big boss (iesb boss), the player's ratio is evaluated. If the ratio is greater than or equal to zero, then the player's strength is boosted by 2x. (known bugs: the 2x strength addition doesn't seem to be working for some reason. Maybe once it is initialized it cannot be changed? I am unsure.)
+
 ### Cars - Brendan
 Users are able to board and ride around in cars. There is currently no functionality to get out of a car. This is done by adding 8 new pictures to the game: one car for each level and a photoshopped version of that car with the player inside.
 

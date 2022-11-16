@@ -15,6 +15,8 @@ namespace Fall2020_CSC403_Project {
     private Player player;
     private SoundPlayer battleSound;
     private SoundPlayer worldSound;
+    private FrmKillOrSpare choice = new FrmKillOrSpare();
+    public int choice_ratio = 0;
     private SoundPlayer crashSound;
     private Boolean playMusic;
 
@@ -90,6 +92,7 @@ namespace Fall2020_CSC403_Project {
       SoundPlayer simpleSound = new SoundPlayer(Resources.iesb_boss);
       simpleSound.Play();
 
+      if (choice_ratio >= 0) { player.DoubleStrength(); }
       tmrFinalBattle.Enabled = true;
     }
 
@@ -164,6 +167,11 @@ namespace Fall2020_CSC403_Project {
         //winSound.Play();
         instance = null;
         Close();
+        choice.ShowDialog();
+        Console.WriteLine(choice_ratio);
+        Console.WriteLine(choice.getRatio());
+        choice_ratio = choice_ratio + choice.getRatio();
+        Console.WriteLine(choice_ratio);
         PlayWorldSound();
       }
     }
